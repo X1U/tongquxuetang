@@ -1,0 +1,20 @@
+{
+  "provider": "Microsoft Edge online reading",
+  "retrievedAt": "2026-09-18",
+  "voices": [
+    {"id":"online:zh-CN-XiaoxiaoNeural","shortName":"zh-CN-XiaoxiaoNeural","name":"晓晓","lang":"zh-CN","gender":"女声","group":"普通话","local":false},
+    {"id":"online:zh-CN-XiaoyiNeural","shortName":"zh-CN-XiaoyiNeural","name":"晓伊","lang":"zh-CN","gender":"女声","group":"普通话","local":false},
+    {"id":"online:zh-CN-YunjianNeural","shortName":"zh-CN-YunjianNeural","name":"云健","lang":"zh-CN","gender":"男声","group":"普通话","local":false},
+    {"id":"online:zh-CN-YunxiNeural","shortName":"zh-CN-YunxiNeural","name":"云希","lang":"zh-CN","gender":"男声","group":"普通话","local":false},
+    {"id":"online:zh-CN-YunxiaNeural","shortName":"zh-CN-YunxiaNeural","name":"云夏","lang":"zh-CN","gender":"男声","group":"普通话","local":false},
+    {"id":"online:zh-CN-YunyangNeural","shortName":"zh-CN-YunyangNeural","name":"云扬","lang":"zh-CN","gender":"男声","group":"普通话","local":false},
+    {"id":"online:zh-TW-HsiaoChenNeural","shortName":"zh-TW-HsiaoChenNeural","name":"晓臻","lang":"zh-TW","gender":"女声","group":"台湾普通话","local":false},
+    {"id":"online:zh-TW-HsiaoYuNeural","shortName":"zh-TW-HsiaoYuNeural","name":"晓雨","lang":"zh-TW","gender":"女声","group":"台湾普通话","local":false},
+    {"id":"online:zh-TW-YunJheNeural","shortName":"zh-TW-YunJheNeural","name":"云哲","lang":"zh-TW","gender":"男声","group":"台湾普通话","local":false},
+    {"id":"online:zh-HK-HiuGaaiNeural","shortName":"zh-HK-HiuGaaiNeural","name":"晓佳","lang":"zh-HK","gender":"女声","group":"粤语","local":false},
+    {"id":"online:zh-HK-HiuMaanNeural","shortName":"zh-HK-HiuMaanNeural","name":"晓曼","lang":"zh-HK","gender":"女声","group":"粤语","local":false},
+    {"id":"online:zh-HK-WanLungNeural","shortName":"zh-HK-WanLungNeural","name":"云龙","lang":"zh-HK","gender":"男声","group":"粤语","local":false},
+    {"id":"online:zh-CN-liaoning-XiaobeiNeural","shortName":"zh-CN-liaoning-XiaobeiNeural","name":"晓北","lang":"zh-CN-liaoning","gender":"女声","group":"东北话","local":false},
+    {"id":"online:zh-CN-shaanxi-XiaoniNeural","shortName":"zh-CN-shaanxi-XiaoniNeural","name":"晓妮","lang":"zh-CN-shaanxi","gender":"女声","group":"陕西话","local":false}
+  ]
+}

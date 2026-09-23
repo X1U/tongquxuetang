@@ -1,0 +1,7 @@
+.home-voice-settings{display:flex;align-items:center;justify-content:center;gap:10px;flex:0 0 auto;min-height:38px;padding:4px 8px;border:1px solid #dce5d8;border-radius:10px;background:#f0f5eb;color:#60745c}
+.home-voice-settings label{display:flex;align-items:center;gap:6px;min-width:0;font-size:12px;font-weight:600;white-space:nowrap}
+.home-voice-settings select{height:32px;max-width:210px;min-width:100px;padding:3px 24px 3px 8px;border:1px solid #d3dfce;border-radius:8px;background:#fffef9;color:#3f624b;font:inherit;font-weight:500}
+.home-voice-settings label:first-child{flex:1;justify-content:flex-end}.home-voice-settings label:first-child select{width:min(240px,100%)}
+.home-voice-settings label:last-child{justify-content:flex-start}.home-voice-settings label:last-child select{min-width:86px}
+@media(max-width:760px){.home-voice-settings{min-height:34px;gap:7px;padding:2px 5px}.home-voice-settings label{gap:3px;font-size:10px}.home-voice-settings select{height:30px;min-width:0;max-width:136px;padding:2px 20px 2px 5px;font-size:11px}.home-voice-settings label:first-child{flex:1}.home-voice-settings label:first-child select{width:100%}.home-voice-settings label:last-child select{width:70px}}
+@media(max-width:350px){.home-voice-settings{gap:4px}.home-voice-settings label{font-size:9px}.home-voice-settings select{font-size:10px}.home-voice-settings label:last-child select{width:63px}}

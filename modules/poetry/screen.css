@@ -1,0 +1,140 @@
+/* Fixed-height book pages. Content is measured and paginated, never clipped instead of paging. */
+html[data-mode="poetry"],body[data-mode="poetry"]{height:100%;min-height:0;overflow:hidden;scroll-padding:0}
+body[data-mode="poetry"] .app{height:var(--poetry-vh,100dvh);min-height:0;display:flex;flex-direction:column;padding:6px 12px 8px;padding-bottom:max(8px,env(safe-area-inset-bottom));gap:6px;overflow:hidden}
+body[data-mode="poetry"] .header{height:40px;min-height:40px;flex:0 0 40px;margin:0}
+body[data-mode="poetry"] .brand-icon{width:30px;height:30px}
+body[data-mode="poetry"] .brand-name{font-size:17px}
+body[data-mode="poetry"] .brand-sub{display:none}
+body[data-mode="poetry"] .header .help-button{min-height:32px;height:32px;padding:4px 10px;font-size:13px}
+body[data-mode="poetry"] .footer{display:none}
+body[data-mode="poetry"] .poetry-screen{height:auto;display:flex;flex:1;min-height:0;overflow:hidden;position:relative}
+.poetry-catalog,.poetry-reader{width:100%;height:100%;min-height:0;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.poetry-small-button{display:inline-flex;justify-content:center;align-items:center;gap:4px;background:#f1f5e9;border:1px solid #dce5d0;border-radius:9px;color:#587049;min-height:32px;padding:4px 9px;font-size:12px;white-space:nowrap}
+.poetry-catalog-heading{display:flex;align-items:center;gap:7px;flex:0 0 33px;min-width:0}
+.poetry-catalog-heading h1{font-size:23px;line-height:1.2;letter-spacing:1px;margin:0 auto 0 0;white-space:nowrap}
+.poetry-total{font-size:11px;padding:3px 7px;white-space:nowrap}
+#poetryResume{width:auto;margin:0;max-width:90px;text-align:center}
+.poetry-search-row{display:flex;align-items:center;gap:7px;flex:0 0 36px}
+.poetry-search{flex:1;min-width:0;min-height:36px;height:36px;padding:0 9px;gap:7px;border-radius:10px;background:#fffefa}
+.poetry-search input{height:34px;font-size:16px}
+.poetry-search .icon{width:16px;height:16px;flex-basis:16px}
+.poetry-search button{width:30px;height:32px;flex-basis:30px;font-size:22px}
+#poetryOpenDirectory{height:36px;min-width:59px;font-size:13px}
+.poetry-filter-row{display:flex;align-items:center;gap:7px;flex:0 0 32px}
+.poetry-meter{flex:1;margin:0;gap:4px}
+.poetry-meter button{min-height:32px;padding:3px 4px;font-size:13px;border-radius:8px}
+#poetryGenre{min-width:76px;width:88px;height:32px;background:#fffdf7;color:#637753;border:1px solid #dce4d1;border-radius:8px;font-size:12px;padding:3px}
+.poetry-results{display:flex;flex:1;flex-direction:column;min-height:0;gap:6px;overflow:hidden}
+.poetry-result-count{flex:0 0 20px;height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;line-height:20px;margin:0 1px}
+.poetry-list{display:grid;flex:1;min-height:0;grid-template-columns:repeat(var(--poetry-columns,1),minmax(0,1fr));grid-template-rows:repeat(var(--poetry-rows,1),minmax(0,1fr));gap:7px;overflow:hidden}
+.poetry-card{height:100%;min-height:0;align-items:center;padding:8px 10px;gap:9px;border-radius:12px}
+.poetry-card-index{font-size:11px;line-height:27px;min-width:27px;height:27px;border-radius:8px}
+.poetry-card-name{font-size:18px;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.poetry-card-byline{font-size:11px;line-height:1.5;margin:2px 0}
+.poetry-card-preview{font-size:12px;line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.poetry-read-mark{font-size:10px;padding:1px 4px;margin-left:5px}
+.poetry-list.is-compact .poetry-card-preview{display:none}
+.poetry-list.is-mini .poetry-card-byline{display:none}
+.poetry-list.is-mini .poetry-card{padding:3px 8px}
+.poetry-catalog-pager,.poetry-reader-pager{display:flex;justify-content:space-between;align-items:center;gap:6px;flex:0 0 40px;min-height:40px;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.poetry-catalog-pager .poetry-button,.poetry-reader-pager .poetry-button{min-height:38px;height:38px;padding:6px 11px;font-size:13px;white-space:nowrap;border-radius:10px}
+.poetry-catalog-pager select,.poetry-reader-pager select{flex:1;min-width:0;max-width:230px;height:38px;min-height:38px;text-align:center;padding:4px;border:1px solid #d9e2cc;border-radius:10px;background:#fffdf7;color:#526b47;font-size:13px}
+.poetry-reader-pager>span{flex:1;text-align:center;font-size:12px;color:#718362}
+.poetry-empty{display:flex;flex:1;min-height:0;flex-direction:column;justify-content:center;align-items:center;padding:10px;font-size:14px}
+.poetry-reader{gap:5px}
+.poetry-reader-nav{height:28px;flex:0 0 28px;min-width:0;margin:0;gap:6px;font-size:11px}
+.poetry-reader-nav>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.poetry-back{min-height:28px;padding:0;font-size:13px;white-space:nowrap}
+.poetry-reader-nav .poetry-small-button{min-height:27px;font-size:11px;padding:3px 6px}
+.poetry-poem-header{padding:0 3px;min-width:0;flex:0 0 auto;text-align:center}
+.poetry-poem-header h1,.poetry-poem-header h1.poetry-long-title{font-size:22px;line-height:2.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0;max-width:100%}
+.poetry-author{font-size:14px;line-height:2;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.poetry-author .poetry-dynasty{font-size:11px;margin-right:7px}
+.poetry-tabs{width:100%;max-width:none;flex:0 0 34px;height:34px;gap:4px;padding:3px;border-radius:10px;margin:0}
+.poetry-tabs button{min-height:28px;height:28px;padding:2px;font-size:14px;border-radius:7px}
+.poetry-tools{display:flex;align-items:center;justify-content:space-between;gap:5px;flex:0 0 33px;min-height:33px}
+.poetry-voice-bar{flex-wrap:nowrap;gap:4px;min-width:0}
+.poetry-voice-bar .poetry-button{min-height:31px;height:31px;padding:4px 8px;font-size:12px;border-radius:9px;white-space:nowrap}
+.poetry-voice-bar .icon{height:16px;width:16px}
+.poetry-reading-tools{flex-wrap:nowrap;gap:10px;margin:0;font-size:12px;white-space:nowrap}
+.poetry-reading-tools label{min-height:31px;gap:3px}
+.poetry-reading-tools input{width:15px;height:15px;margin:0}
+.poetry-voice-status{flex:0 0 16px;min-height:16px;height:16px;line-height:16px;margin:0;font-size:11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.poetry-reader-viewport{display:flex;flex:1;min-height:0;min-width:0;overflow:hidden;position:relative}
+.poetry-read-panel{display:flex;width:100%;height:100%;min-height:0;padding:10px 7px;border-radius:16px;box-shadow:none;overflow:hidden}
+.poetry-flow{display:flex;flex-direction:column;gap:7px;position:relative;min-width:0;min-height:0;overflow:hidden}
+.poetry-flow>*{flex-shrink:0}
+.poetry-verses{width:100%;height:100%;max-width:none;margin:0;justify-content:center}
+.poetry-verse{flex:0 0 auto;min-height:43px;padding:3px 0 5px;font-size:clamp(21px,5.7vw,32px)!important;border-radius:10px;line-height:1.4}
+.poetry-verse.is-long{font-size:clamp(18px,5vw,27px)!important}
+.poetry-verse ruby{margin-top:0}
+.poetry-reader-footer{display:flex;flex-direction:column;flex:0 0 69px;gap:2px;min-height:69px}
+.poetry-pagination{flex:0 0 27px;min-height:27px;margin:0;gap:5px}
+.poetry-pagination .poetry-small-button{min-height:26px;height:26px;font-size:11px;padding:2px 6px;background:transparent;border-color:transparent}
+.poetry-pagination>span{font-size:11px;white-space:nowrap}
+#poetryExplainPanel{width:100%;height:100%;min-height:0;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.poetry-figure{flex:0 0 30%;min-height:52px;max-height:155px;border-radius:14px;background:#f0f3e5}
+#poetryIllustration{height:100%}
+.poetry-figure svg{width:100%;height:100%;max-height:none;object-fit:contain}
+.poetry-picture-label{top:5px;left:7px;font-size:10px;padding:2px 7px}
+.poetry-explanation-copy{flex:1;min-height:0;padding:0;border:0;background:transparent;border-radius:0}
+.poetry-text-block{margin:0;padding:0 4px;color:#52674c}
+.poetry-text-block h2{font-size:14px;line-height:1.6;margin:0 0 5px;color:#556f45}
+.poetry-text-block p{font-size:15px;line-height:1.9;margin:0;overflow-wrap:anywhere}
+.poetry-text-block .poetry-note-heading{display:flex;align-items:center;gap:6px;font-size:17px;line-height:1.4;margin:0 0 4px}
+.poetry-note-heading button{display:flex;align-items:center;gap:6px;font-size:17px;background:#edf3e2;border-radius:8px;border:0;padding:3px 7px;color:#506d43}
+.poetry-note-heading .icon{width:15px;height:15px}
+.poetry-note-heading>span{font-size:10px;color:#7e8b70}
+.poetry-sheet{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;gap:9px;min-height:0;padding:12px;border:1px solid #d7e1cd;border-radius:16px;background:#fffdf6;box-shadow:0 5px 22px #40562d14}
+.poetry-sheet-header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex:0 0 33px}
+.poetry-sheet-header h2{font-size:18px;margin:0;color:#526e43;white-space:nowrap}
+.poetry-sheet-content{flex:1;min-height:0;gap:9px}
+.poetry-directory-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;min-height:52px}
+.poetry-directory-pair button{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:2px;border:1px solid #dce5d0;border-radius:10px;background:#f3f6ea;color:#526d44;font-size:15px;line-height:1.4;padding:8px 10px;min-height:52px;min-width:0}
+.poetry-directory-pair button>span{font-size:11px;color:#7b896d}
+.poetry-directory-pair button[aria-pressed="true"]{background:#e3ecd6;border-color:#9eb785}
+.poetry-title-fragment{font-family:"Noto Serif CJK SC","Songti SC",SimSun,serif;font-size:24px;line-height:2.2;text-align:center;overflow-wrap:anywhere}
+.poetry-license-fragment{font:12px/1.75 monospace!important;white-space:pre-wrap;overflow-wrap:anywhere}
+.poetry-measure{position:absolute!important;left:0!important;top:0!important;height:auto!important;min-height:0!important;max-height:none!important;visibility:hidden!important;pointer-events:none!important;overflow:visible!important;justify-content:flex-start!important;padding:0!important;border:0!important;margin:0!important;contain:none!important}
+.poetry-measure>*{height:auto}
+html[data-poetry-size="compact"] body[data-mode="poetry"] .poetry-poem-header{display:flex;align-items:center;gap:8px;text-align:left}
+html[data-poetry-size="compact"] body[data-mode="poetry"] .poetry-poem-header h1{flex:1;min-width:0;font-size:19px}
+html[data-poetry-size="compact"] body[data-mode="poetry"] .poetry-author{font-size:12px;max-width:35%}
+html[data-poetry-size="compact"] body[data-mode="poetry"] .poetry-catalog-heading h1{font-size:21px}
+html[data-poetry-size="tiny"] body[data-mode="poetry"] .app{padding:3px 9px 4px;gap:3px}
+html[data-poetry-size="tiny"] body[data-mode="poetry"] .header{height:27px;min-height:27px;flex-basis:27px}
+html[data-poetry-size="tiny"] body[data-mode="poetry"] .brand-icon{width:24px;height:24px}
+html[data-poetry-size="tiny"] body[data-mode="poetry"] .brand-name{font-size:14px}
+html[data-poetry-size="tiny"] body[data-mode="poetry"] .header .help-button{height:26px;min-height:26px}
+html[data-poetry-size="tiny"] .poetry-catalog,html[data-poetry-size="tiny"] .poetry-reader{gap:3px}
+html[data-poetry-size="tiny"] .poetry-catalog-heading{height:24px;flex-basis:24px}
+html[data-poetry-size="tiny"] .poetry-catalog-heading h1{font-size:18px}
+html[data-poetry-size="tiny"] .poetry-total{display:none}
+html[data-poetry-size="tiny"] .poetry-reader-nav{height:23px;flex-basis:23px}
+html[data-poetry-size="tiny"] .poetry-poem-header{display:flex;align-items:center;gap:8px}
+html[data-poetry-size="tiny"] .poetry-poem-header h1{flex:1;min-width:0;font-size:17px;line-height:1.85}
+html[data-poetry-size="tiny"] .poetry-author{font-size:12px;max-width:35%;line-height:1.85}
+html[data-poetry-size="tiny"] .poetry-tabs{flex-basis:27px;height:27px;padding:2px}
+html[data-poetry-size="tiny"] .poetry-tabs button{height:23px;min-height:23px;font-size:12px}
+html[data-poetry-size="tiny"] .poetry-tools{flex-basis:28px;min-height:28px}
+html[data-poetry-size="tiny"] .poetry-voice-bar .poetry-button,html[data-poetry-size="tiny"] .poetry-reading-tools label{height:27px;min-height:27px}
+html[data-poetry-size="tiny"] .poetry-voice-status{display:none}
+html[data-poetry-size="tiny"] .poetry-reader-footer{flex-basis:58px;min-height:58px}
+html[data-poetry-size="tiny"] .poetry-reader-pager{flex-basis:33px;min-height:33px}
+html[data-poetry-size="tiny"] .poetry-reader-pager .poetry-button,html[data-poetry-size="tiny"] .poetry-reader-pager select{height:32px;min-height:32px;padding:3px 7px;font-size:12px}
+html[data-poetry-size="tiny"] .poetry-pagination{flex-basis:23px;min-height:23px}
+html[data-poetry-size="tiny"] .poetry-pagination .poetry-small-button{height:22px;min-height:22px}
+html[data-poetry-size="tiny"] .poetry-read-panel{padding:5px 6px}
+html[data-poetry-size="tiny"] .poetry-verses{gap:4px}
+html[data-poetry-size="tiny"] .poetry-verse{min-height:34px;font-size:20px!important;padding:1px 0 3px}
+html[data-poetry-size="tiny"] .poetry-verse.is-long{font-size:18px!important}
+html[data-poetry-size="tiny"] .poetry-sheet{padding:7px;gap:5px}
+html[data-poetry-size="tiny"] .poetry-sheet-header{flex-basis:29px}
+html[data-poetry-size="tiny"] #poetryExplainPanel{flex-direction:row;gap:9px}
+html[data-poetry-size="tiny"] .poetry-figure{flex:0 0 28%;height:100%;max-height:none;min-height:0}
+html[data-poetry-size="tiny"] .poetry-text-block h2{font-size:12px;line-height:1.4;margin-bottom:3px}
+html[data-poetry-size="tiny"] .poetry-text-block p{font-size:13px;line-height:1.65}
+html[data-poetry-size="tiny"] .poetry-note-heading button{font-size:14px;padding:2px 5px}
+@media(min-width:600px){#poetryExplainPanel{flex-direction:row;gap:15px}.poetry-figure{flex:0 0 38%;height:100%;max-height:none;min-height:0}.poetry-reader-nav,.poetry-tabs,.poetry-tools,.poetry-reader-footer{width:100%;max-width:none}.poetry-verse{font-size:29px!important}}
+@media(max-height:400px) and (min-width:450px){#poetryExplainPanel{flex-direction:row;gap:10px}.poetry-figure{flex:0 0 30%;height:100%;max-height:none;min-height:0}}
+@media(max-width:360px){.poetry-catalog-heading h1{font-size:21px}.poetry-catalog-heading .poetry-total{display:none}.poetry-card-name{font-size:16px}.poetry-reading-tools{gap:6px}.poetry-voice-bar .poetry-button{padding:4px 6px;font-size:11px}}

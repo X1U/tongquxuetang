@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "apkPath": "app/build/outputs/apk/debug/app-debug.apk",
+  "packageName": "com.picturecard.learning",
+  "certificateSHA256": "9b40776f4663893287153ec7e6d1a1686b21f9350d5a3a9740a1ad36f504c667",
+  "installType": "public",
+  "notesFile": "发布说明.txt",
+  "channelShortcut": "",
+  "uploadRegion": "domestic",
+  "uploadTimeoutSeconds": 300,
+  "processingTimeoutSeconds": 300,
+  "pollIntervalSeconds": 4,
+  "androidSdkPath": ".tools/android-sdk",
+  "buildToolsVersion": "35.0.0"
+}

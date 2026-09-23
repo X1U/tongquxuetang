@@ -1,0 +1,9 @@
+{
+  "name": "tongqu-online-speech",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pinned client for optional online Chinese reading voices",
+  "dependencies": {
+    "node-edge-tts": "1.2.10"
+  }
+}

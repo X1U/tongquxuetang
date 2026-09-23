@@ -1,0 +1,29 @@
+    <main id="soundScreen" class="listen-screen" aria-labelledby="soundTitle" hidden>
+      <div class="listen-heading"><div><p class="listen-kicker">小耳朵，大发现</p><h1 id="soundTitle">声音侦探</h1></div><button type="button" class="listen-small" data-listen-help="sound">怎么玩</button></div>
+      <div class="listen-tabs" role="group" aria-label="声音玩法"><button type="button" data-sound-mode="single" aria-pressed="true">听音找图</button><button type="button" data-sound-mode="sequence" aria-pressed="false">先后顺序</button></div>
+      <div class="listen-settings"><label>声音 <select id="soundCategory"><option value="all">全部声音</option><option value="body">身体声音</option><option value="objects">生活物品</option></select></label><span id="soundCollection" class="listen-collection"></span></div>
+      <section class="sound-task" aria-labelledby="soundPrompt">
+        <div class="sound-player"><div id="soundEar" class="sound-ear" aria-hidden="true"></div><div class="sound-player-copy"><h2 id="soundPrompt">谁发出了这个声音？</h2><div class="listen-play-row"><button type="button" id="soundPlay" class="listen-primary">听听声音</button><button type="button" id="soundStop" class="listen-small" hidden>停止</button></div></div></div>
+        <div id="soundOrder" class="sound-order" aria-label="听到的声音顺序" hidden></div>
+        <div id="soundOptions" class="sound-options" aria-label="选择声音对应的图片"></div>
+      </section>
+      <p id="soundFeedback" class="listen-feedback" role="status" aria-live="polite">先点“听听声音”，再选图片。</p>
+      <div class="listen-bottom"><button type="button" id="soundHint" class="listen-secondary">给我线索</button><button type="button" id="soundNext" class="listen-primary">换一题</button></div>
+      <div class="listen-progress"><span id="soundStars" class="listen-stars" role="img" aria-label="本轮尚未得到星星"></span><span id="soundProgress">集齐 5 颗星，点亮侦探徽章</span></div>
+    </main>
+    <main id="trainScreen" class="listen-screen" aria-labelledby="trainTitle" hidden>
+      <div class="listen-heading"><div><p class="listen-kicker">听一听，做一做，说一说</p><h1 id="trainTitle">听说小火车</h1></div><button type="button" class="listen-small" data-listen-help="train">怎么玩</button></div>
+      <div class="listen-tabs" role="group" aria-label="听说任务"><button type="button" data-train-mode="commands" aria-pressed="true">听令行动</button><button type="button" data-train-mode="repeat" aria-pressed="false">九字传话</button></div>
+      <div class="listen-settings"><label id="trainLevelLabel">指令 <select id="trainLevel"><option value="1">一步起步</option><option value="2" selected>两步挑战</option><option value="3">三步进阶</option></select></label><span id="trainSentenceCount" hidden>20 句 · 每句 9 个字</span></div>
+      <section class="train-task" aria-labelledby="trainPrompt">
+        <div class="train-scene"><span class="train-cloud cloud-one"></span><span class="train-cloud cloud-two"></span><div id="trainArt" class="train-art" aria-hidden="true"></div><span class="train-station">星星站</span></div>
+        <div class="train-task-copy"><span class="listen-task-badge" id="trainTaskNumber"></span><h2 id="trainPrompt">听完再行动</h2><p id="trainInstruction">记住任务，听完后做一做。</p></div>
+        <div id="trainMemory" class="train-memory" aria-hidden="true"></div>
+        <div class="listen-play-row"><button type="button" id="trainPlay" class="listen-primary">听听任务</button><button type="button" id="trainStop" class="listen-small" hidden>停止</button></div>
+        <div class="train-support"><button type="button" id="trainHint" class="listen-text-button">文字提示 / 家长读题</button><button type="button" id="trainChunks" class="listen-text-button" hidden>分段练习</button></div>
+      </section>
+      <p id="trainFeedback" class="listen-feedback" role="status" aria-live="polite">点“听听任务”，小火车等你出发。</p>
+      <div class="listen-bottom"><button type="button" id="trainNext" class="listen-secondary">换一题</button><button type="button" id="trainReview" class="listen-primary" disabled>我做完了</button></div>
+      <div class="listen-progress"><span id="trainStars" class="listen-stars" role="img" aria-label="本轮尚未得到星星"></span><span id="trainProgress">每完成 1 个任务，小火车前进一站</span></div>
+    </main>
+    <dialog id="listenDialog" class="listen-dialog" aria-labelledby="listenDialogTitle"><div class="listen-dialog-heading"><h2 id="listenDialogTitle"></h2><button type="button" id="listenDialogClose" class="listen-small" aria-label="关闭提示">关闭</button></div><div id="listenDialogBody" class="listen-dialog-body"></div><p id="listenDialogStatus" class="listen-dialog-status" role="status" aria-live="polite"></p><div id="listenDialogActions" class="listen-dialog-actions"></div></dialog>

@@ -1,0 +1,13 @@
+  <dialog id="updateDialog" class="update-dialog" aria-labelledby="updateTitle">
+    <div class="update-dialog-heading"><h2 id="updateTitle">版本与更新</h2><button type="button" id="closeUpdateDialog" aria-label="关闭版本与更新">关闭 ×</button></div>
+    <p id="updateCurrentVersion" class="update-current-version"></p>
+    <p id="updateStatus" class="update-status" role="status" aria-live="polite"></p>
+    <div id="updateDownloadPanel" class="update-download-panel" hidden>
+      <p id="updateDownloadMessage" role="status" aria-live="polite"></p>
+      <div id="updateProgressRow"><progress id="updateProgress" max="100" aria-label="安装包下载进度"></progress><span id="updateProgressText"></span></div>
+      <button type="button" id="cancelUpdateDownload" hidden>取消下载</button>
+    </div>
+    <div class="update-notes"><h3 id="updateNotesTitle">本次更新</h3><p id="updateNotes"></p></div>
+    <p id="updateHint" class="update-hint"></p>
+    <div class="update-dialog-actions"><button type="button" id="dialogCheckUpdate">检查更新</button><button type="button" id="nativeUpdateAction" class="update-primary" hidden>下载并安装</button><a id="updateInstallLink" target="_blank" rel="noopener noreferrer">打开安装页</a></div>
+  </dialog>

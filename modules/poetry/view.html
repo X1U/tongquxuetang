@@ -1,0 +1,55 @@
+    <main id="poetryScreen" class="mode-screen poetry-screen" aria-labelledby="poetryTitle" hidden>
+      <section id="poetryCatalog" class="poetry-catalog" aria-label="唐诗目录">
+        <div class="poetry-catalog-heading"><h1 id="poetryTitle" tabindex="-1">唐诗三百首</h1><span class="poetry-total">320 篇</span><button type="button" id="poetryResume" class="poetry-small-button" hidden>接着读</button><button type="button" id="poetryAbout" class="poetry-small-button">关于</button></div>
+        <div class="poetry-search-row">
+          <label class="poetry-search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="poetry-sr-only">搜索诗名、作者或诗句，关键词可用空格分开</span><input id="poetrySearch" type="search" placeholder="诗名、作者、诗句" autocomplete="off" maxlength="100" enterkeyhint="search"><button type="button" id="poetryClearSearch" aria-label="清空搜索" hidden>×</button></label>
+          <button type="button" id="poetryOpenDirectory" class="poetry-small-button" aria-haspopup="dialog">目录 ▦</button>
+        </div>
+        <div class="poetry-filter-row">
+          <div class="poetry-meter" role="group" aria-label="按句式选择"><button type="button" data-poetry-meter="all" aria-pressed="true">全部</button><button type="button" data-poetry-meter="five" aria-pressed="false">五言</button><button type="button" data-poetry-meter="seven" aria-pressed="false">七言</button><button type="button" data-poetry-meter="mixed" aria-pressed="false">长短句</button></div>
+          <select id="poetryGenre" aria-label="按体裁选择"><option value="all">全部体裁</option><option value="jue">绝句</option><option value="lv">律诗</option><option value="gu">古诗</option><option value="yuefu">乐府</option></select>
+        </div>
+        <div id="poetryResults" class="poetry-results">
+          <p id="poetryResultCount" class="poetry-result-count" role="status" aria-live="polite" tabindex="-1"></p>
+          <div id="poetryList" class="poetry-list"></div>
+          <div id="poetryEmpty" class="poetry-empty" hidden><p>没有找到，试试诗名里的几个字。</p><button type="button" id="poetryResetFilters" class="poetry-button">清空筛选</button></div>
+        </div>
+        <nav id="poetryPagerBottom" class="poetry-catalog-pager" aria-label="目录翻页">
+          <button type="button" data-poetry-page-step="-1" class="poetry-button">← 上一页</button><select data-poetry-page-select aria-label="选择目录页码"></select><button type="button" data-poetry-page-step="1" class="poetry-button">下一页 →</button>
+        </nav>
+      </section>
+      <article id="poetryReader" class="poetry-reader" aria-labelledby="poetryPoemTitle" hidden>
+        <div class="poetry-reader-nav"><button type="button" id="poetryBackCatalog" class="poetry-back">← 返回目录</button><span id="poetryReaderMeta"></span><button type="button" id="poetryFullTitle" class="poetry-small-button">异文</button></div>
+        <div class="poetry-tabs" role="tablist" aria-label="阅读与讲解"><button type="button" id="poetryReadTab" role="tab" aria-selected="true" aria-controls="poetryReadPanel" tabindex="0">读古诗</button><button type="button" id="poetryExplainTab" role="tab" aria-selected="false" aria-controls="poetryExplainPanel" tabindex="-1">诗词讲解</button></div>
+        <div class="poetry-tools">
+          <div class="poetry-voice-bar"><button type="button" id="poetrySpeak" class="poetry-button poetry-primary"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg><span id="poetrySpeakLabel">听整首</span></button><button type="button" id="poetryStop" class="poetry-button" hidden>停止朗读</button><button type="button" id="poetryVoiceSettings" class="poetry-button" hidden>语音设置</button></div>
+          <div class="poetry-reading-tools"><label><input type="checkbox" id="poetryPinyin" checked>显示拼音</label></div>
+        </div>
+        <p id="poetrySpeechStatus" class="poetry-voice-status" role="status" aria-live="polite">点一句诗，可以单独听。</p>
+        <div id="poetryStudyTabs" class="poetry-study-tabs" role="tablist" aria-label="讲解栏目" hidden>
+          <button type="button" id="poetryStudyTranslation" data-poetry-study="translation" role="tab" aria-selected="true" aria-controls="poetryStudyContent" tabindex="0">译文</button>
+          <button type="button" id="poetryStudyNotes" data-poetry-study="notes" role="tab" aria-selected="false" aria-controls="poetryStudyContent" tabindex="-1">注释</button>
+          <button type="button" id="poetryStudyBackground" data-poetry-study="background" role="tab" aria-selected="false" aria-controls="poetryStudyContent" tabindex="-1">背景</button>
+          <button type="button" id="poetryStudyAnalysis" data-poetry-study="analysis" role="tab" aria-selected="false" aria-controls="poetryStudyContent" tabindex="-1">简析</button>
+          <button type="button" id="poetryStudyAppreciation" data-poetry-study="appreciation" role="tab" aria-selected="false" aria-controls="poetryStudyContent" tabindex="-1">赏析</button>
+        </div>
+        <div class="poetry-reader-viewport">
+          <div id="poetryBook" class="poetry-book" tabindex="0" role="region" aria-label="诗词全文与讲解">
+          <header class="poetry-poem-header"><h1 id="poetryPoemTitle" tabindex="-1"></h1><p id="poetryAuthor" class="poetry-author"></p></header>
+          <section id="poetryReadPanel" class="poetry-read-panel" role="tabpanel" aria-labelledby="poetryReadTab"><div id="poetryVerses" class="poetry-flow poetry-verses"></div></section>
+          <section id="poetryExplainPanel" role="tabpanel" aria-labelledby="poetryExplainTab" hidden>
+            <section id="poetryStudyContent" role="tabpanel" aria-labelledby="poetryStudyTranslation"><div id="poetryExplanation" class="poetry-flow poetry-explanation-copy"></div></section>
+            <p class="poetry-reference"><span>讲解：童趣学堂</span><a id="poetryReference" href="https://hanyu.baidu.com/hanyu-page/poem/list" rel="noopener noreferrer">百度汉语参考 ↗</a></p>
+          </section>
+          </div>
+        </div>
+        <footer class="poetry-reader-footer">
+          <nav class="poetry-pagination" aria-label="换一首诗"><button type="button" id="poetryPrevious" class="poetry-button">← 上一篇</button><span id="poetrySequence"></span><button type="button" id="poetryNext" class="poetry-button">下一篇 →</button></nav>
+        </footer>
+      </article>
+      <div id="poetrySheet" class="poetry-sheet" role="dialog" aria-modal="true" aria-labelledby="poetrySheetTitle" hidden>
+        <div class="poetry-sheet-header"><h2 id="poetrySheetTitle" tabindex="-1"></h2><button type="button" id="poetrySheetClose" class="poetry-small-button" aria-label="关闭">关闭 ×</button></div>
+        <div id="poetrySheetContent" class="poetry-flow poetry-sheet-content"></div>
+        <nav class="poetry-reader-pager" aria-label="弹窗内容翻页"><button type="button" id="poetrySheetPrevious" class="poetry-button">← 上一页</button><span id="poetrySheetPage"></span><button type="button" id="poetrySheetNext" class="poetry-button">下一页 →</button></nav>
+      </div>
+    </main>

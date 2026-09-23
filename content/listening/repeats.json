@@ -1,0 +1,26 @@
+{
+  "source": "言语复述9个字.pptx",
+  "corrections": [{"number":3,"original":"我们一去去玩摩天轮","corrected":"我们一起去玩摩天轮","reason":"改正明显笔误，保持九个汉字。"}],
+  "sentences": [
+    {"id":"say-01","number":1,"icon":"flower","text":"爷爷奶奶在花园浇花","chunks":["爷爷奶奶","在花园","浇花"]},
+    {"id":"say-02","number":2,"icon":"book","text":"我是爱学习的好孩子","chunks":["我是","爱学习的","好孩子"]},
+    {"id":"say-03","number":3,"icon":"wheel","text":"我们一起去玩摩天轮","chunks":["我们一起","去玩","摩天轮"]},
+    {"id":"say-04","number":4,"icon":"rain","text":"今天的天气是雷雨天","chunks":["今天的天气","是","雷雨天"]},
+    {"id":"say-05","number":5,"icon":"dog","text":"小狗在草地上跑呀跑","chunks":["小狗","在草地上","跑呀跑"]},
+    {"id":"say-06","number":6,"icon":"house","text":"房子有个红色的屋顶","chunks":["房子有个","红色的","屋顶"]},
+    {"id":"say-07","number":7,"icon":"rabbit","text":"大灰狼小白兔的故事","chunks":["大灰狼","小白兔的","故事"]},
+    {"id":"say-08","number":8,"icon":"pencil","text":"晚上回家我要写作业","chunks":["晚上回家","我要","写作业"]},
+    {"id":"say-09","number":9,"icon":"walk","text":"晚饭后我们会去散步","chunks":["晚饭后","我们会去","散步"]},
+    {"id":"say-10","number":10,"icon":"dress","text":"我喜欢一条红色裙子","chunks":["我喜欢","一条","红色裙子"]},
+    {"id":"say-11","number":11,"icon":"truck","text":"爸爸在开蓝色的卡车","chunks":["爸爸在开","蓝色的","卡车"]},
+    {"id":"say-12","number":12,"icon":"baby","text":"宝宝穿着尿不湿睡觉","chunks":["宝宝穿着","尿不湿","睡觉"]},
+    {"id":"say-13","number":13,"icon":"rope","text":"小朋友在操场上跳绳","chunks":["小朋友","在操场上","跳绳"]},
+    {"id":"say-14","number":14,"icon":"corn","text":"农民伯伯在忙收玉米","chunks":["农民伯伯","在忙","收玉米"]},
+    {"id":"say-15","number":15,"icon":"badminton","text":"我和哥哥在打羽毛球","chunks":["我和哥哥","在打","羽毛球"]},
+    {"id":"say-16","number":16,"icon":"flower","text":"秋天我们可以看菊花","chunks":["秋天","我们可以","看菊花"]},
+    {"id":"say-17","number":17,"icon":"scarf","text":"妈妈戴着一条红丝巾","chunks":["妈妈戴着","一条","红丝巾"]},
+    {"id":"say-18","number":18,"icon":"fish","text":"金鱼在水里游来游去","chunks":["金鱼","在水里","游来游去"]},
+    {"id":"say-19","number":19,"icon":"feather","text":"女孩在操场上踢毽子","chunks":["女孩","在操场上","踢毽子"]},
+    {"id":"say-20","number":20,"icon":"feather","text":"天空中有一根白羽毛","chunks":["天空中","有一根","白羽毛"]}
+  ]
+}

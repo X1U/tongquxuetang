@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/chinese-poetry/chinese-poetry",
+  "retrievedAt": "2026-09-15T02:28:13.422Z",
+  "sources": [
+    {
+      "path": "蒙学/tangshisanbaishou.json",
+      "localFile": "tangshi-300.raw.json",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/master/%E8%92%99%E5%AD%A6/tangshisanbaishou.json",
+      "sha256": "8423b65d938d0327e369972e790549b42609fa7ac4a2a72df59f4cb5a49c08f8"
+    }
+  ],
+  "licenseUrl": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/master/LICENSE"
+}

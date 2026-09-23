@@ -1,0 +1,73 @@
+/* The reading frame contains the complete poem. Only long content scrolls; poem navigation stays visible. */
+#poetryReader{gap:5px}
+#poetryReader .poetry-reader-nav{height:44px;min-height:44px;flex:0 0 44px;margin:0;gap:7px}
+#poetryReader .poetry-back{height:44px;min-height:44px;min-width:110px;padding:7px 10px;background:#fffdf7;border:1px solid #d2dfc7;border-radius:11px;font-size:16px;font-weight:700}
+#poetryReader .poetry-reader-nav>span{font-size:12px;text-align:center}
+#poetryReader .poetry-reader-nav .poetry-small-button{min-height:42px;height:42px;padding:7px 10px;font-size:13px}
+#poetryReader .poetry-tabs{height:36px;flex:0 0 36px;min-height:36px;padding:3px;margin:0}
+#poetryReader .poetry-tabs button{height:30px;min-height:30px;font-size:15px;padding:2px}
+#poetryReader .poetry-tools{flex:0 0 auto;min-height:40px;gap:5px;flex-wrap:wrap}
+#poetryReader .poetry-voice-bar{gap:5px}
+#poetryReader .poetry-voice-bar .poetry-button{min-height:38px;height:38px;padding:6px 9px;font-size:14px}
+#poetryReader .poetry-reading-tools{font-size:14px;gap:8px;margin:0}
+#poetryReader .poetry-reading-tools label{min-height:38px;height:38px;gap:4px}
+#poetryReader .poetry-reading-tools input{width:18px;height:18px}
+#poetryReader .poetry-voice-status{display:block;flex:0 0 16px;min-height:16px;height:16px;line-height:16px;margin:0;font-size:11px}
+#poetryReader .poetry-reader-viewport{min-height:0;flex:1;display:flex;overflow:hidden}
+#poetryReader .poetry-book{width:100%;height:100%;min-height:0;display:flex;flex-direction:column;gap:8px;padding:10px 9px 12px;overflow:auto;overscroll-behavior:contain;touch-action:pan-y;scrollbar-width:thin;scrollbar-color:#c9d6be transparent;background:#fffdf5;border:1px solid #dde3d3;border-radius:18px;box-shadow:0 3px 13px #50653906}
+#poetryReader .poetry-poem-header{display:block;flex:0 0 auto;min-width:0;padding:0 0 6px;border-bottom:1px solid #e8ebdd;text-align:center}
+#poetryReader .poetry-poem-header h1,#poetryReader .poetry-poem-header h1.poetry-long-title{display:block;max-width:none;font-size:clamp(24px,6.9vw,31px);line-height:1.85;margin:0;white-space:normal;overflow:visible;overflow-wrap:anywhere;text-overflow:clip}
+#poetryReader .poetry-author{font-size:16px;line-height:1.85;max-width:none;letter-spacing:0;margin:3px 0 0;white-space:normal;overflow:visible}
+#poetryReader .poetry-author .poetry-dynasty{font-size:12px;margin-right:8px}
+#poetryReader .poetry-read-panel{display:flex;flex:1 0 auto;width:100%;height:auto;min-height:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible}
+#poetryReader .poetry-verses{display:flex;flex-direction:column;flex:none;width:100%;height:auto;max-width:900px;min-height:0;margin:auto;gap:7px;overflow:visible;justify-content:flex-start}
+#poetryReader .poetry-couplet{display:contents}
+#poetryReader .poetry-verses.is-paired .poetry-couplet{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+#poetryReader .poetry-verses.is-paired .poetry-couplet.is-single{grid-template-columns:1fr}
+#poetryReader .poetry-verse{width:100%;display:flex;flex-wrap:nowrap;align-items:flex-end;justify-content:center;flex:0 0 auto;min-height:44px;padding:3px 0 5px;margin:0;line-height:1.3;font-size:clamp(26px,7.5vw,36px)!important}
+#poetryReader .poetry-verse.is-long{flex-wrap:wrap;font-size:clamp(24px,6.8vw,31px)!important}
+#poetryReader .poetry-verses.is-paired .poetry-verse{font-size:clamp(22px,6.65vw,30px)!important;min-height:42px}
+#poetryReader ruby{min-width:1.22em;padding:0 .01em;line-height:1.25}
+#poetryReader ruby rt{font-size:.4em;line-height:1.4;min-height:1.4em}
+#poetryReader .poetry-verse ruby{margin-top:0}
+#poetryReader .poetry-verses.is-paired ruby{min-width:1.14em}
+#poetryReader .poetry-verses.is-paired ruby rt{font-size:.38em}
+#poetryReader .poetry-verse .poetry-punctuation{min-width:.36em;line-height:1.25;font-size:.75em}
+.poetry-no-pinyin #poetryReader ruby{min-width:1.2em}
+.poetry-no-pinyin #poetryReader .poetry-verses.is-paired ruby{min-width:1.14em}
+#poetryReader #poetryExplainPanel{display:flex;flex:0 0 auto;flex-direction:column;width:100%;height:auto;min-height:0;gap:14px;overflow:visible}
+#poetryReader .poetry-study-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;flex:0 0 42px;min-height:42px}
+#poetryReader .poetry-study-tabs button{min-width:0;height:42px;padding:4px 2px;border:1px solid #dbe4d0;border-radius:10px;background:#fffdf7;color:#5a6d48;font:inherit;font-size:15px;font-weight:600}
+#poetryReader .poetry-study-tabs button[aria-selected="true"]{background:#e2efd5;border-color:#99b481;color:#2f5425;box-shadow:inset 0 -2px 0 #99b481}
+#poetryReader .poetry-study-tabs button:focus-visible{outline:3px solid #d79737;outline-offset:1px}
+#poetryReader #poetryStudyContent{width:100%;min-width:0}
+#poetryReader .poetry-reference{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px;margin:4px 4px 0;border-top:1px solid #e8ebdd;padding-top:6px;color:#77836d;font-size:12px;line-height:1.6}
+#poetryReader .poetry-reference a{display:inline-flex;align-items:center;min-height:44px;color:#557546;text-underline-offset:3px}
+#poetryReader .poetry-explanation-copy{flex:0 0 auto;width:100%;height:auto;overflow:visible;gap:17px}
+#poetryReader .poetry-text-block{padding:0 4px}
+#poetryReader .poetry-text-block h2{font-size:16px;line-height:1.7;margin:0 0 6px}
+#poetryReader .poetry-text-block p{font-size:18px;line-height:1.95;white-space:pre-line;overflow-wrap:anywhere}
+#poetryReader .poetry-text-block.is-unavailable{color:#74816b;background:#f3f5ee;border-radius:12px;padding:12px}
+#poetryReader .poetry-text-block .poetry-note-heading{font-size:19px}
+#poetryReader .poetry-note-heading button{font-size:19px;min-height:44px;padding:5px 9px}
+#poetryReader .poetry-reader-footer{flex:0 0 46px;min-height:46px;gap:0}
+#poetryReader .poetry-pagination{height:46px;min-height:46px;flex:1;display:flex;align-items:center;justify-content:space-between;gap:7px;margin:0}
+#poetryReader .poetry-pagination .poetry-button{height:44px;min-height:44px;min-width:100px;padding:7px 11px;font-size:15px;border-radius:11px}
+#poetryReader .poetry-pagination>span{font-size:12px;white-space:nowrap;color:#748466}
+@media(max-width:360px){#poetryReader .poetry-reading-tools{font-size:13px;gap:5px}#poetryReader .poetry-voice-bar .poetry-button{padding:6px 7px;font-size:13px}#poetryReader .poetry-reader-nav>span{font-size:11px}#poetryReader .poetry-book{padding:7px 7px 9px;gap:6px}#poetryReader .poetry-poem-header h1{font-size:24px}#poetryReader .poetry-author{font-size:15px;margin-top:0}#poetryReader .poetry-verses{gap:5px}}
+@media(max-width:360px){#poetryReader .poetry-verses.is-paired .poetry-verse{padding-top:1px;padding-bottom:2px}#poetryReader .poetry-poem-header{padding-bottom:3px}#poetryReader .poetry-book{gap:5px}}
+@media(max-height:560px){#poetryReader .poetry-voice-status{position:absolute;clip-path:inset(50%);height:1px;min-height:0;flex-basis:0;overflow:hidden}#poetryReader .poetry-book{padding-top:6px}#poetryReader .poetry-poem-header{padding-bottom:5px}#poetryReader .poetry-poem-header h1{font-size:24px}#poetryReader .poetry-author{font-size:15px}}
+/* Put controls beside each other on a short, wide screen to leave room for the book. */
+@media(max-height:500px) and (min-width:540px){
+  #poetryReader{display:grid;grid-template-columns:minmax(225px,.95fr) minmax(0,1.05fr);grid-template-rows:44px auto minmax(0,1fr) 46px;gap:5px}
+  #poetryReader .poetry-reader-nav{grid-area:1 / 1;min-width:0;justify-content:space-between}
+  #poetryReader .poetry-reader-nav>span{display:none}
+  #poetryReader .poetry-tabs{grid-area:1 / 2;align-self:center;min-width:0}
+  #poetryReader .poetry-tools{grid-area:2 / 1;align-self:start;justify-content:flex-start}
+  #poetryReader[data-tab="read"] .poetry-tools{grid-column:1 / -1;justify-content:space-between}
+  #poetryReader .poetry-study-tabs{grid-area:2 / 2;align-self:start}
+  #poetryReader .poetry-reader-viewport{grid-area:3 / 1 / 4 / 3;height:100%}
+  #poetryReader .poetry-reader-footer{grid-area:4 / 1 / 5 / 3}
+  #poetryReader .poetry-reading-tools{font-size:12px;gap:6px}
+  #poetryReader .poetry-voice-bar .poetry-button{font-size:13px;padding:6px 7px}
+}

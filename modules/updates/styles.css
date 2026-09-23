@@ -1,0 +1,34 @@
+.home-update-bar{display:flex;align-items:center;gap:8px;flex:0 0 auto;min-height:34px;border-top:1px solid #dfe7d8;padding-top:6px;color:#738369;font-size:11px}
+.home-update-bar button{font:inherit;color:#536f47;border:1px solid #d9e3cf;background:#fffef7;border-radius:9px;padding:6px 9px;min-height:36px;white-space:nowrap;cursor:pointer}
+.home-update-bar #homeVersion{border:0;background:transparent;padding-left:0;color:#76856c}
+.home-update-bar #homeUpdateStatus{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home-update-bar .update-primary,.update-dialog-actions a,.update-dialog-actions .update-primary{background:#617e52;color:white;border-color:#617e52}
+.home-update-bar [hidden]{display:none!important}
+.update-dialog{box-sizing:border-box;width:min(440px,calc(100% - 28px));max-height:calc(100dvh - 28px);padding:19px;border:1px solid #d4dfc9;border-radius:19px;background:#fffdf6;color:#425d39;box-shadow:0 12px 50px #243b2826;overflow:auto}
+.update-dialog::backdrop{background:#28372566}
+.update-dialog button,.update-dialog a{font:inherit;font-size:13px;min-height:36px;border:1px solid #d6e0ce;border-radius:9px;padding:7px 12px;cursor:pointer;text-decoration:none}
+.update-dialog button{background:#f3f6eb;color:#536e45}
+.update-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.update-dialog-heading h2{margin:0;font-size:21px}
+.update-dialog-heading button{border:0;background:transparent;padding:5px;color:#78866d}
+.update-current-version{margin:13px 0 7px;color:#7b876e;font-size:12px}
+.update-status{font-size:14px;line-height:1.75;margin:8px 0 14px;min-height:24px}
+.update-notes{padding:12px 14px;background:#f0f4e7;border-radius:12px}
+.update-notes h3{font-size:13px;margin:0 0 7px;color:#526a46}
+.update-notes p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.85;margin:0;color:#69795a}
+.update-hint{font-size:11px;line-height:1.8;color:#7d886e;margin:12px 0}
+.update-dialog-actions{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.update-dialog-actions a{display:inline-flex;align-items:center;justify-content:center}
+.home-update-bar button:disabled,.update-dialog button:disabled{opacity:.65;cursor:wait}
+.home-update-bar button:focus-visible,.update-dialog :focus-visible{outline:3px solid #8da978;outline-offset:2px}
+.update-dialog [hidden]{display:none!important}
+.update-download-panel{background:#edf3e5;border:1px solid #d7e4cb;border-radius:12px;padding:12px;margin:0 0 13px}
+.update-download-panel p{font-size:13px;line-height:1.7;margin:0;overflow-wrap:anywhere}
+.update-download-panel progress{display:block;width:100%;height:10px;margin:10px 0 6px;accent-color:#617e52}
+.update-download-panel progress::-webkit-progress-bar{background:#d9e4d0;border-radius:6px}
+.update-download-panel progress::-webkit-progress-value{background:#6f925b;border-radius:6px}
+#updateProgressText{display:block;font-size:12px;color:#718364;line-height:1.5;font-variant-numeric:tabular-nums}
+#cancelUpdateDownload{display:block;margin:10px 0 0 auto;background:transparent;min-height:36px}
+.update-download-panel[data-state="error"]{background:#fff1e4;border-color:#e8d8c4}
+@media(max-width:760px){body[data-mode="home"] .home-screen{gap:7px}.home-update-bar{font-size:11px;gap:5px;padding-top:4px}.home-update-bar button{padding:4px 6px;min-height:36px}}
+@media(max-height:650px) and (max-width:760px){body[data-mode="home"] .home-welcome .eyebrow{display:none}body[data-mode="home"] .home-welcome h1{font-size:21px;margin:2px 0 4px}body[data-mode="home"] .mode-cta{display:none}}

@@ -1,0 +1,373 @@
+{
+  "sourceFile": "辨听人体和物体的声音.pptx",
+  "sourceSha256": "318dca72311bee178c212d2555017a45fcb218e0f7c923ee8fe96ca46f3a8ab1",
+  "sourceAudioCount": 25,
+  "excluded": [
+    {
+      "name": "枪声-1",
+      "reason": "第一版选取身体和日常生活的24种声音。"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "burp",
+      "label": "打嗝",
+      "category": "body",
+      "clue": "吃饱后，有时会从嘴里冒出短短的一声。",
+      "audio": "audio/burp.mp3",
+      "image": "images/burp.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media1.mp3",
+        "mediaName": "打嗝-1",
+        "sha256": "0c3f29641e78cf5e3e7eddc1792ad8697385532f3c1cced764b0e7a50f14df82"
+      }
+    },
+    {
+      "id": "yawn",
+      "label": "打哈欠",
+      "category": "body",
+      "clue": "困了的时候，会张大嘴巴长长地呼一口气。",
+      "audio": "audio/yawn.mp3",
+      "image": "images/yawn.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media2.mp3",
+        "mediaName": "打哈欠-1",
+        "sha256": "eea0d25061ec55f27d5a2f01d0033dca4df73fbe336944ecae8077ebc2d5176c"
+      }
+    },
+    {
+      "id": "sneeze",
+      "label": "打喷嚏",
+      "category": "body",
+      "clue": "鼻子痒痒时，会突然“阿嚏”一声。",
+      "audio": "audio/sneeze.mp3",
+      "image": "images/sneeze.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media3.mp3",
+        "mediaName": "打喷嚏声-1",
+        "sha256": "ee2b512b303b83b36d36eaa6c10ce3a292723d4db44cecbedf7a823cbd53ece2"
+      }
+    },
+    {
+      "id": "snore",
+      "label": "打呼噜",
+      "category": "body",
+      "clue": "睡着时，有时会发出一阵一阵的呼噜声。",
+      "audio": "audio/snore.mp3",
+      "image": "images/snore.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media4.mp3",
+        "mediaName": "鼾声-1",
+        "sha256": "15555cc757dc8448151fa392f3c7037deca6ec6516db5dbc6f3c67af90f65d75"
+      }
+    },
+    {
+      "id": "cry",
+      "label": "哭声",
+      "category": "body",
+      "clue": "难过的时候，会有呜呜的哭声。",
+      "audio": "audio/cry.mp3",
+      "image": "images/cry.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media7.mp3",
+        "mediaName": "小孩哭-1",
+        "sha256": "f328f89825e01b1aea287f64dbe090dc0ef3b4ae25d7af72dad8ecb2aad01ccf"
+      }
+    },
+    {
+      "id": "gargle",
+      "label": "漱口",
+      "category": "body",
+      "clue": "水在嘴里发出咕噜咕噜的声音。",
+      "audio": "audio/gargle.mp3",
+      "image": "images/gargle.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media6.mp3",
+        "mediaName": "漱口-1",
+        "sha256": "e381b3bf55c518c26b2a3767237046976e89c893e7f348eb3b3fa4bc7730a850"
+      }
+    },
+    {
+      "id": "nose",
+      "label": "擤鼻涕",
+      "category": "body",
+      "clue": "用纸巾捂住鼻子，呼气时有呼呼的声音。",
+      "audio": "audio/nose.mp3",
+      "image": "images/nose.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media9.mp3",
+        "mediaName": "擤鼻涕-1",
+        "sha256": "7ec736351636bcd7a79496977e3defb5fda4cae8d8e6ac4dc4f6563855901c67"
+      }
+    },
+    {
+      "id": "laugh",
+      "label": "笑声",
+      "category": "body",
+      "clue": "开心的时候，会发出哈哈的笑声。",
+      "audio": "audio/laugh.mp3",
+      "image": "images/laugh.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media8.mp3",
+        "mediaName": "小孩笑-2",
+        "sha256": "31fd343ffb31b5dad148bdac07579f197da90aa469d55a748f1bf86732c6eb8a"
+      }
+    },
+    {
+      "id": "cough",
+      "label": "咳嗽",
+      "category": "body",
+      "clue": "喉咙不舒服时，有时会咳咳几声。",
+      "audio": "audio/cough.mp3",
+      "image": "images/cough.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media5.mp3",
+        "mediaName": "咳嗽声-1",
+        "sha256": "03c88620d8ba4520d35b52fc343b6abb5364ee26ce6663b4a23744e8ddae327e"
+      }
+    },
+    {
+      "id": "steps",
+      "label": "脚步声",
+      "category": "body",
+      "clue": "鞋底一下接一下地碰到地面。",
+      "audio": "audio/steps.mp3",
+      "image": "images/steps.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media10.mp3",
+        "mediaName": "脚步声-1",
+        "sha256": "c7e59ef5102e46e85ba2aa748f499f410ef7f0ecd6f79dac0b186c5419bb304a"
+      }
+    },
+    {
+      "id": "whistle",
+      "label": "吹口哨",
+      "category": "body",
+      "clue": "嘴巴吹出的声音细细长长，像在唱歌。",
+      "audio": "audio/whistle.mp3",
+      "image": "images/whistle.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media11.mp3",
+        "mediaName": "口哨-1",
+        "sha256": "cb4fe8ff7dada6b92820506caf3bac8a4d7d8c705998fd5b41ff80e842d70d81"
+      }
+    },
+    {
+      "id": "applause",
+      "label": "拍手",
+      "category": "body",
+      "clue": "两只手掌碰在一起，发出啪、啪的声音。",
+      "audio": "audio/applause.mp3",
+      "image": "images/applause.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media13.mp3",
+        "mediaName": "掌声-1",
+        "sha256": "09059848ada03aee1f85f6f1ddcde2f1dcbca0f6347c1b8e1b921aed11541003"
+      }
+    },
+    {
+      "id": "brush",
+      "label": "刷牙",
+      "category": "body",
+      "clue": "牙刷来回刷动，会发出沙沙的声音。",
+      "audio": "audio/brush.mp3",
+      "image": "images/brush.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 1,
+        "media": "ppt/media/media12.mp3",
+        "mediaName": "刷牙-1",
+        "sha256": "f87703df40e0531d846bdcb8805cbbd63fd91fdc47e6ffecdc36cbcda2c93a86"
+      }
+    },
+    {
+      "id": "horn",
+      "label": "车喇叭",
+      "category": "objects",
+      "clue": "汽车用嘀嘀声提醒路上的人。",
+      "audio": "audio/horn.mp3",
+      "image": "images/horn.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media14.mp3",
+        "mediaName": "车喇叭声-1",
+        "sha256": "ce4c00acdb8728dc2954fb6267f1dc467a151b9db65f001346f5aed952ff9f3c"
+      }
+    },
+    {
+      "id": "pour",
+      "label": "倒水",
+      "category": "objects",
+      "clue": "水流进杯子时，会哗啦啦地响。",
+      "audio": "audio/pour.mp3",
+      "image": "images/pour.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media15.mp3",
+        "mediaName": "倒水",
+        "sha256": "0ef082c75e0f9e86fe4eb5b2bb3c89820316e33d593c1de92f31df461c44945b"
+      }
+    },
+    {
+      "id": "phone",
+      "label": "电话铃声",
+      "category": "objects",
+      "clue": "电话响了，铃声在提醒有人来电话。",
+      "audio": "audio/phone.mp3",
+      "image": "images/phone.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media16.mp3",
+        "mediaName": "电话铃声",
+        "sha256": "4c11f3a7aa57a7deb5d1e7cd6c57f7e787c009fe8a7c775b2ae0886d8ec4bb2b"
+      }
+    },
+    {
+      "id": "door",
+      "label": "开关门",
+      "category": "objects",
+      "clue": "门打开、合上时，会发出吱呀或咔嗒声。",
+      "audio": "audio/door.mp3",
+      "image": "images/door.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media22.mp3",
+        "mediaName": "开关门声-1",
+        "sha256": "f9b6ae32f3960bbf3b10569e434d246699db96dda6abb3bd12f851fb2aefe8e2"
+      }
+    },
+    {
+      "id": "siren",
+      "label": "警笛声",
+      "category": "objects",
+      "clue": "长长的警笛声，一会儿高，一会儿低。",
+      "audio": "audio/siren.mp3",
+      "image": "images/siren.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media17.mp3",
+        "mediaName": "警笛声-1",
+        "sha256": "38e9e2bae1c2bc9f5424f0d87273938d46c4fb2c265d6f61fe2d8667cf0656c1"
+      }
+    },
+    {
+      "id": "doorbell",
+      "label": "门铃",
+      "category": "objects",
+      "clue": "叮咚，是有人按响了门口的铃。",
+      "audio": "audio/doorbell.mp3",
+      "image": "images/doorbell.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media18.mp3",
+        "mediaName": "门铃",
+        "sha256": "17ed1d5f80d7559af5d5dda536b60920cc29b1bf18a98106261a0ebc6ca8ca82"
+      }
+    },
+    {
+      "id": "chop",
+      "label": "切菜",
+      "category": "objects",
+      "clue": "菜刀一下下碰到菜板，声音有节奏。",
+      "audio": "audio/chop.mp3",
+      "image": "images/chop.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media21.mp3",
+        "mediaName": "切菜",
+        "sha256": "6ac95d71c36bd623c36d4bbc3f0e709bf28b0285d20835d2b5f55655565b43fb"
+      }
+    },
+    {
+      "id": "clock",
+      "label": "秒表",
+      "category": "objects",
+      "clue": "滴答、滴答，时间一秒一秒走过去。",
+      "audio": "audio/clock.mp3",
+      "image": "images/clock.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media19.mp3",
+        "mediaName": "秒表滴答-1",
+        "sha256": "170717cb80938c9e74ff8b76fddf4d20afce99bba3239cc11c049176c20f33e8"
+      }
+    },
+    {
+      "id": "knock",
+      "label": "敲门",
+      "category": "objects",
+      "clue": "有人用手叩门，发出笃笃的声音。",
+      "audio": "audio/knock.mp3",
+      "image": "images/knock.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media20.mp3",
+        "mediaName": "敲门声-1",
+        "sha256": "82fcf31954ef4c63e1c71a0e8ebb47e5386723c255664432c00336bfda54ec90"
+      }
+    },
+    {
+      "id": "schoolbell",
+      "label": "校园铃声",
+      "category": "objects",
+      "clue": "铃声响起，提醒小朋友上课或下课。",
+      "audio": "audio/schoolbell.mp3",
+      "image": "images/schoolbell.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media23.mp3",
+        "mediaName": "校园铃声-1",
+        "sha256": "19de4aca5995e7b06322c60c52dbc5ec61ad02bbcccea00d4c9e2d74f9ed31f7"
+      }
+    },
+    {
+      "id": "hood",
+      "label": "油烟机",
+      "category": "objects",
+      "clue": "厨房的油烟机转起来，会持续嗡嗡响。",
+      "audio": "audio/hood.mp3",
+      "image": "images/hood.webp",
+      "source": {
+        "file": "辨听人体和物体的声音.pptx",
+        "slide": 2,
+        "media": "ppt/media/media24.mp3",
+        "mediaName": "油烟机",
+        "sha256": "c60398cc5b26c5d90ad031a8c943e790bf4d4b211daab6a1b6d7d6845a9119d5"
+      }
+    }
+  ]
+}

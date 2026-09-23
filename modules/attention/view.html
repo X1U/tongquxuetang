@@ -1,0 +1,31 @@
+    <main id="attentionScreen" class="attention-screen" aria-labelledby="attentionTitle" hidden>
+      <div class="attention-heading"><div><p class="attention-kicker">小耳朵听，大脑袋记</p><h1 id="attentionTitle">专注力听觉训练卡</h1></div><button type="button" id="attentionHelp" class="attention-small">怎么玩</button></div>
+      <div class="attention-settings"><label>难度 <select id="attentionLevel" aria-label="训练难度"></select></label><span id="attentionCardNumber"></span></div>
+      <ol class="attention-steps" aria-label="练习步骤"><li data-attention-step="listen"><b>1</b> 听一句话</li><li data-attention-step="questions"><b>2</b> 回答问题</li><li data-attention-step="result"><b>3</b> 回看句子</li></ol>
+      <section class="attention-card" aria-label="当前训练卡">
+        <div id="attentionContent" class="attention-content" tabindex="0" aria-label="训练内容，可上下滚动">
+          <div id="attentionListenPanel" class="attention-listen-panel">
+            <div id="attentionIllustration" class="attention-illustration" aria-hidden="true"></div>
+            <span id="attentionQuestionCount" class="attention-badge"></span>
+            <h2 id="attentionListenTitle">用小耳朵记住一句话</h2><p id="attentionListenHint">听清人物、地点和事情。</p>
+            <div class="attention-memory" aria-hidden="true"><span>听</span><i></i><span>记</span><i></i><span>答</span></div>
+          </div>
+          <div id="attentionQuestionPanel" hidden>
+            <p id="attentionQuestionNumber" class="attention-badge"></p>
+            <div class="attention-question-heading"><h2 id="attentionQuestion" tabindex="-1"></h2><button type="button" id="attentionReadQuestion" class="attention-small" aria-label="朗读问题和全部选项">听题</button></div>
+            <div id="attentionOptions" class="attention-options" role="group" aria-label="选择一个答案"></div>
+          </div>
+          <div id="attentionResultPanel" hidden>
+            <span class="attention-badge">这张卡完成啦</span><h2 id="attentionResultTitle" tabindex="-1"></h2>
+            <p id="attentionResultNote" class="attention-result-note"></p>
+            <p id="attentionSentence" class="attention-sentence"></p>
+            <ol id="attentionReview" class="attention-review" aria-label="逐题回顾"></ol>
+          </div>
+        </div>
+        <div class="attention-audio-row"><button type="button" id="attentionPlay" class="attention-primary"><svg class="icon" aria-hidden="true"><use href="#i-sound"/></svg><span id="attentionPlayLabel">听一句话</span></button><button type="button" id="attentionStop" class="attention-small" hidden>停止</button><button type="button" id="attentionParent" class="attention-text-button">原句提示 / 家长读题</button></div>
+      </section>
+      <p id="attentionStatus" class="attention-status" role="status" aria-live="polite">先听完一句话，再来回答问题。</p>
+      <div class="attention-bottom"><button type="button" id="attentionNextCard" class="attention-secondary">换一张</button><button type="button" id="attentionContinue" class="attention-primary" disabled>开始答题</button></div>
+      <p id="attentionProgress" class="attention-progress"></p>
+    </main>
+    <dialog id="attentionDialog" class="attention-dialog" aria-labelledby="attentionDialogTitle"><div class="attention-dialog-heading"><h2 id="attentionDialogTitle"></h2><button type="button" id="attentionDialogClose" class="attention-small" aria-label="关闭训练提示">关闭</button></div><div id="attentionDialogBody" class="attention-dialog-body"></div><button type="button" id="attentionParentDone" class="attention-primary" hidden>家长读完了，收起原句</button></dialog>

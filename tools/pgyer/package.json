@@ -1,0 +1,9 @@
+{
+  "name": "picture-learning-pgyer-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pinned official Pgyer CLI for APK publishing",
+  "dependencies": {
+    "@pgyer/cli": "0.1.5"
+  }
+}

@@ -1,0 +1,225 @@
+/* 唐诗区以可滚动的书页呈现；所有阅读样式局限于本模块。 */
+.mode-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mode-card.pattern-mode{grid-column:auto;display:block}
+.mode-card.pattern-mode .mode-cover{width:100%;height:190px}
+.mode-card.poetry-mode .mode-cover{background:#eeeadd}
+.poetry-mode .mode-skills span{color:#80703f;background:#f5f0dd}
+.poetry-mode .mode-cta{color:#80703f}
+#homePoetryArt>svg{height:94%;max-width:96%;width:240px;position:relative;z-index:1}
+html[data-mode="poetry"]{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto;scroll-padding-bottom:24px}
+body[data-mode="poetry"]{height:auto;min-height:100vh;min-height:100dvh;overflow:visible}
+body[data-mode="poetry"] .app{height:auto;min-height:100vh;min-height:100dvh;display:block;overflow:visible;padding-bottom:24px}
+body[data-mode="poetry"] .poetry-screen{display:block;height:auto;flex:none;overflow:visible}
+body[data-mode="poetry"] .footer{margin:24px 0 0}
+.poetry-screen{--po-ink:#34493e;--po-muted:#687967;--po-accent:#667e59;--po-paper:#fffdf5;--po-line:#e0e5d7;color:var(--po-ink);min-width:0;flex:1}
+.poetry-screen [hidden]{display:none!important}
+.poetry-screen button,.poetry-screen input,.poetry-screen select{font:inherit}
+.poetry-screen button{touch-action:manipulation}
+.poetry-screen button:focus-visible,.poetry-screen input:focus-visible,.poetry-screen select:focus-visible,.poetry-screen summary:focus-visible{outline:3px solid #718c57;outline-offset:4px}
+.poetry-screen button:disabled{opacity:.4;cursor:default}
+.poetry-intro{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:26px 3px 22px}
+.poetry-eyebrow{margin:0 0 10px;color:#7c865c;font-size:12px;font-weight:600;letter-spacing:2px}
+.poetry-intro h1{font-size:34px;letter-spacing:2px;line-height:1.3;margin:0 0 12px}
+.poetry-subtitle{font-size:14px;line-height:1.8;margin:0 0 11px;color:var(--po-muted)}
+.poetry-total{display:inline-block;color:#806a40;font-size:12px;background:#f1ecdb;padding:6px 12px;border-radius:20px}
+.poetry-intro-art{width:174px;flex:0 0 174px}
+.poetry-intro-art>svg{display:block;width:100%;height:auto}
+.poetry-resume{background:#e9f0e2;border:1px solid #d5e0cb;border-radius:13px;color:#4d6c43;font-size:14px;padding:12px 15px;min-height:46px;line-height:1.7;text-align:left;width:100%;margin:0 0 14px;overflow-wrap:anywhere}
+.poetry-filters{background:#fffefa;border:1px solid var(--po-line);border-radius:22px;padding:20px;box-shadow:0 3px 12px #4d644005}
+.poetry-search{display:flex;align-items:center;gap:10px;background:#f5f6ef;border:1px solid #dce3d4;border-radius:13px;padding:0 12px;min-height:50px}
+.poetry-search .icon{width:20px;flex:0 0 20px;color:#75866c}
+.poetry-search input{min-width:0;flex:1;border:0;outline:none;background:transparent;color:var(--po-ink);font-size:16px;height:48px;padding:0}
+.poetry-search input::placeholder{color:#818a77}
+.poetry-search input::-webkit-search-cancel-button{display:none}
+.poetry-search button{border:0;background:transparent;color:#71806b;font-size:25px;width:38px;height:42px;flex:0 0 38px}
+.poetry-meter{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:15px}
+.poetry-meter button{min-height:44px;border:1px solid #e0e5d6;border-radius:11px;color:#67775a;background:transparent;font-size:15px;font-weight:600;padding:7px 4px}
+.poetry-meter button[aria-pressed="true"]{background:#647c54;color:#fff;border-color:#647c54}
+.poetry-genre-row{display:flex;align-items:center;gap:13px;margin-top:14px;font-size:12px;color:#7b856d}
+.poetry-genre{display:flex;flex-wrap:wrap;gap:5px;flex:1}
+.poetry-genre button{border:0;border-radius:9px;min-height:40px;padding:7px 13px;font-size:13px;color:#77816d;background:transparent}
+.poetry-genre button[aria-pressed="true"]{background:#f2ecdb;color:#806635;font-weight:700}
+.poetry-search-hint{font-size:12px;line-height:1.7;color:#7b856d;margin:8px 0 0}
+.poetry-directory{margin:14px 0 0;border:1px solid var(--po-line);border-radius:15px;background:#fffefa;padding:0 16px}
+.poetry-directory>summary{cursor:pointer;min-height:52px;padding:12px 0;color:#536c46;font-size:14px;line-height:1.9}
+.poetry-directory>summary>span:first-child{font-weight:700}
+.poetry-directory>summary>span:last-child{font-size:12px;font-weight:400;color:#7b856c;margin-left:10px}
+.poetry-directory nav{display:grid;gap:14px;border-top:1px solid var(--po-line);padding:15px 0 18px}
+.poetry-directory-group h2{font-size:13px;font-weight:600;margin:0 0 8px;color:#748364}
+.poetry-directory-entries{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.poetry-directory-entries button{min-height:48px;display:flex;justify-content:space-between;align-items:center;gap:5px;background:#f6f7ef;border:1px solid #e3e8d8;border-radius:10px;padding:8px 11px;text-align:left;color:#526b47;font-size:14px}
+.poetry-directory-entries button>span{font-size:12px;color:#7e896e;white-space:nowrap}
+.poetry-directory-entries button[aria-pressed="true"]{background:#e8f0dd;border-color:#9cb785}
+.poetry-results{scroll-margin-top:12px}
+.poetry-result-count{font-size:13px;color:var(--po-muted);line-height:1.7;margin:20px 2px 0}
+.poetry-catalog-pager{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 0;padding:9px;background:#f5f6ed;border:1px solid #dde4d3;border-radius:14px}
+.poetry-catalog-pager-top{position:sticky;top:0;z-index:5;box-shadow:0 4px 12px #425b3010}
+.poetry-catalog-pager .poetry-button{padding:9px 13px;white-space:nowrap}
+.poetry-catalog-pager select{min-height:44px;min-width:0;max-width:220px;flex:1;background:#fffdf7;border:1px solid #d9e2cc;color:#526b47;border-radius:10px;padding:8px 6px;text-align:center;font-size:14px;cursor:pointer}
+.poetry-group{margin:24px 0 30px}
+.poetry-group-heading{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid #dce3d3;padding-bottom:12px}
+.poetry-group-heading h2{font-size:23px;margin:0;font-weight:700;letter-spacing:2px}
+.poetry-group-heading>span{font-size:12px;color:#7b866d}
+.poetry-subgroup{margin:19px 0 24px}
+.poetry-subgroup h3{font-size:14px;color:#6b795a;font-weight:600;margin:0 0 11px}
+.poetry-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.poetry-card{display:flex;align-items:flex-start;text-align:left;gap:12px;border:1px solid #e2e7da;background:#fffefa;border-radius:15px;padding:15px;min-width:0;color:var(--po-ink);transition:border-color .18s,background .18s}
+.poetry-card:hover{border-color:#9cb38a;background:#f8fbed}
+.poetry-card-index{font-size:12px;line-height:32px;min-width:32px;height:32px;text-align:center;flex:0 0 auto;background:#eef2e5;color:#7f8e6a;border-radius:10px;font-variant-numeric:tabular-nums}
+.poetry-card-copy{display:block;flex:1;min-width:0}
+.poetry-card-name{display:block;font-size:18px;font-weight:700;line-height:1.55;overflow-wrap:anywhere}
+.poetry-card-byline{display:block;font-size:12px;color:#7e876e;margin:5px 0 7px;line-height:1.6}
+.poetry-card-preview{display:block;font-size:13px;line-height:1.7;color:#66775b;overflow-wrap:anywhere}
+.poetry-read-mark{font-weight:400;font-size:11px;background:#ecf2e3;color:#6f875c;padding:2px 6px;border-radius:10px;margin-left:7px;white-space:nowrap}
+.poetry-empty{padding:40px 10px;text-align:center;font-size:15px;line-height:1.8}
+.poetry-to-top{display:block;margin:16px auto 24px;border:0;background:transparent;color:#667d55;min-height:44px;font-size:14px;padding:8px 16px}
+.poetry-credits{border-top:1px solid #dfe5d8;color:#748068;font-size:12px;line-height:1.9;padding:16px 2px;overflow-wrap:anywhere}
+.poetry-credits summary,.poetry-variants summary{cursor:pointer;min-height:36px;line-height:36px}
+.poetry-credits p{margin:10px 0}
+.poetry-credits pre{font:11px/1.7 monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.poetry-reader-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0;color:#7f886f;font-size:12px}
+.poetry-back{min-height:44px;border:0;background:transparent;color:#566e48;font-size:15px;font-weight:600;padding:6px 10px 6px 0}
+.poetry-poem-header{text-align:center;padding:12px 12px 17px}
+.poetry-poem-header .poetry-eyebrow{margin-bottom:18px}
+.poetry-poem-header h1{font-family:"Noto Serif CJK SC","Songti SC",SimSun,serif;font-size:29px;line-height:2.4;margin:0 auto 12px;max-width:760px;font-weight:700;overflow-wrap:anywhere}
+.poetry-poem-header h1.poetry-long-title{font-size:22px;line-height:2.1}
+.poetry-screen ruby{display:inline-flex;flex-direction:column-reverse;align-items:center;justify-content:flex-end;min-width:1.44em;vertical-align:bottom;line-height:1.35;padding:0 .01em}
+.poetry-screen ruby rt{display:block;font-family:Arial,"Microsoft YaHei",sans-serif;font-size:.41em;font-weight:400;line-height:1.4;letter-spacing:0;color:#7d886b;white-space:nowrap;min-height:1.4em}
+.poetry-screen ruby rp{display:none}
+.poetry-screen .poetry-punctuation{display:inline-block;min-width:.65em;line-height:1.35;vertical-align:bottom}
+.poetry-screen.poetry-no-pinyin ruby rt{display:none}
+.poetry-screen.poetry-no-pinyin ruby{min-width:1.3em}
+.poetry-screen.poetry-no-pinyin .poetry-poem-header h1{line-height:1.7}
+.poetry-author{font-size:17px;letter-spacing:1px;line-height:1.8;margin:0;color:#738167}
+.poetry-author .poetry-dynasty{font-size:13px;margin-right:12px;letter-spacing:0}
+.poetry-reading-tools{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 25px;margin:0 0 17px;font-size:13px;color:#6c7c60}
+.poetry-reading-tools label{display:flex;align-items:center;gap:6px;min-height:40px;cursor:pointer}
+.poetry-reading-tools input{accent-color:#667e59;width:17px;height:17px}
+.poetry-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;background:#ebeede;border-radius:14px;max-width:580px;margin:0 auto 15px}
+.poetry-tabs button{background:transparent;border:1px solid transparent;color:#7c8669;border-radius:10px;min-height:46px;padding:8px;font-size:16px;font-weight:600}
+.poetry-tabs button[aria-selected="true"]{background:#fffdf6;border-color:#dbe3ce;color:#506b43;box-shadow:0 2px 4px #41563008}
+.poetry-voice-bar{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.poetry-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#fffdf7;color:#647656;border:1px solid #d9e2cc;border-radius:12px;min-height:44px;padding:10px 16px;font-size:14px;font-weight:600}
+.poetry-button .icon{width:20px;height:20px}
+.poetry-primary{background:#657e54;border-color:#657e54;color:#fff}
+.poetry-primary:hover{background:#526c43}
+.poetry-voice-status{text-align:center;color:#7a846c;font-size:12px;line-height:1.8;min-height:24px;margin:9px 0 14px}
+.poetry-read-panel{background:var(--po-paper);border:1px solid #e5e6d7;border-radius:24px;padding:26px 20px 20px;box-shadow:0 5px 22px #4e654708}
+.poetry-verses{max-width:780px;margin:auto;display:grid;gap:8px}
+.poetry-verse{display:flex;align-items:flex-end;justify-content:center;flex-wrap:wrap;min-width:0;width:100%;min-height:60px;border:1px solid transparent;border-radius:13px;padding:7px 3px 9px;background:transparent;color:#344b3d;font-family:"Noto Serif CJK SC","Songti SC",SimSun,serif!important;font-size:clamp(21px,5.7vw,34px)!important;line-height:1.6;scroll-margin-top:28px}
+.poetry-verse.is-long{font-size:clamp(19px,5vw,28px)!important}
+.poetry-verse:hover{background:#f2f5e7}
+.poetry-verse.is-speaking{background:#edf3df;border-color:#b9ce9f}
+.poetry-verse ruby{margin-top:3px}
+.poetry-tap-hint{display:flex;align-items:center;justify-content:center;gap:7px;color:#8a947a;font-size:12px;line-height:1.7;margin:23px 0 0}
+.poetry-tap-hint .icon{width:16px;height:16px;flex:0 0 16px}
+.poetry-variants{border-top:1px dashed #dce1cf;margin:20px 0 0;padding-top:8px;font-size:12px;color:#838a72;line-height:1.8}
+.poetry-explanation-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:start}
+.poetry-figure{position:relative;margin:0;overflow:hidden;background:#fffdf5;border:1px solid #e2e5d5;border-radius:22px}
+.poetry-figure svg{display:block;width:100%;height:auto}
+.poetry-figure figcaption{padding:15px 18px 18px;color:#758067;font-size:13px;line-height:1.9}
+.poetry-picture-label{position:absolute;left:13px;top:12px;background:#fffef2dc;color:#8b805d;border-radius:20px;padding:4px 9px;font-size:11px;pointer-events:none}
+.poetry-explanation-copy{background:#fffefa;border:1px solid #e3e8d9;border-radius:22px;padding:23px}
+.poetry-explanation-copy h2{font-size:18px;color:#566d48;margin:0 0 13px;line-height:1.5}
+.poetry-meaning p{font-size:16px;line-height:2.05;letter-spacing:.3px;margin:0;color:#52674c}
+.poetry-words{margin-top:24px;border-top:1px dashed #dae3ca;padding-top:21px}
+.poetry-words-hint{font-size:12px;color:#7f8972;margin:-6px 0 12px}
+.poetry-words dl{margin:0}
+.poetry-word{padding:12px 0;border-bottom:1px solid #edf0e5}
+.poetry-word:last-child{border:0;padding-bottom:0}
+.poetry-word dt{margin:0 0 6px}
+.poetry-word dt button{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px;border:0;background:#f1f5e7;color:#4d6d40;border-radius:9px;font-size:18px;padding:6px 8px;min-height:44px;max-width:100%;text-align:left}
+.poetry-word dt .icon{width:15px;height:15px;margin-left:3px;flex:0 0 15px}
+.poetry-word dd{font-size:14px;line-height:1.9;color:#6d7c61;margin:0 3px}
+.poetry-pagination{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:23px 0 0}
+.poetry-pagination>span{font-size:12px;color:#818a73;text-align:center;line-height:1.7}
+.poetry-pagination .poetry-button{flex:0 0 auto}
+.poetry-sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){
+  body[data-mode="home"] .mode-options{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:8px}
+  body[data-mode="home"] .mode-card.pattern-mode{grid-column:auto;flex-direction:column}
+  body[data-mode="home"] .pattern-mode .mode-cover{flex:1;min-height:0;width:100%;height:auto}
+  body[data-mode="home"] .pattern-mode .mode-content{display:block;flex:0 0 auto;padding:6px 9px}
+  body[data-mode="home"] .mode-content h2{font-size:18px;letter-spacing:0}
+  body[data-mode="home"] .home-pattern-art{max-height:82%;width:94%;gap:0}
+  body[data-mode="home"] .home-pattern-art>.art{width:24%;height:auto;max-height:85px}
+  body[data-mode="home"] .home-pattern-question{font-size:25px;width:26px;height:36px;min-width:26px}
+  body[data-mode="home"] #homePoetryArt>svg{max-height:100%;width:160px}
+  body[data-mode="poetry"] .app{padding:8px 12px 24px;padding-top:calc(8px + env(safe-area-inset-top));padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  body[data-mode="poetry"] .header{height:50px;flex:0 0 50px}
+  body[data-mode="poetry"] .brand-name{font-size:17px}
+  .poetry-intro{padding:24px 2px 20px;gap:8px}
+  .poetry-intro h1{font-size:27px;margin-bottom:10px;letter-spacing:1px}
+  .poetry-intro .poetry-eyebrow{font-size:11px;letter-spacing:1px;margin-bottom:8px}
+  .poetry-subtitle{font-size:12px;line-height:1.8;max-width:220px}
+  .poetry-total{font-size:11px;padding:5px 9px}
+  .poetry-intro-art{width:96px;flex-basis:96px}
+  .poetry-filters{padding:13px;border-radius:18px}
+  .poetry-meter{gap:5px;margin-top:12px}
+  .poetry-meter button{font-size:14px}
+  .poetry-genre-row{gap:5px;margin-top:9px}
+  .poetry-genre-row>span{display:none}
+  .poetry-genre{gap:2px;justify-content:space-between}
+  .poetry-genre button{padding:7px 10px}
+  .poetry-search-hint{font-size:11px}
+  .poetry-directory{padding:0 12px;margin-top:11px}
+  .poetry-directory-entries{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .poetry-directory>summary>span:last-child{margin-left:6px;font-size:11px}
+  .poetry-catalog-pager{gap:6px;padding:7px;margin-top:10px}
+  .poetry-catalog-pager .poetry-button{padding:8px;font-size:13px}
+  .poetry-catalog-pager select{font-size:13px;padding:8px 3px}
+  .poetry-result-count{margin-top:16px;font-size:12px}
+  .poetry-group{margin-top:21px}
+  .poetry-group-heading h2{font-size:21px}
+  .poetry-cards{grid-template-columns:1fr;gap:9px}
+  .poetry-card{padding:13px 12px;gap:10px}
+  .poetry-card-name{font-size:18px}
+  .poetry-reader-nav{margin:9px 0 6px}
+  .poetry-poem-header{padding:10px 0 14px}
+  .poetry-poem-header h1{font-size:25px;margin-bottom:11px}
+  .poetry-poem-header h1.poetry-long-title{font-size:20px;line-height:2.1}
+  .poetry-author{font-size:16px}
+  .poetry-reading-tools{gap:9px 25px;margin-bottom:12px}
+  .poetry-tabs{margin-bottom:13px}
+  .poetry-tabs button{font-size:15px}
+  .poetry-read-panel{padding:18px 7px;border-radius:19px}
+  .poetry-verses{gap:7px}
+  .poetry-verse{padding:6px 0 8px;min-height:56px}
+  .poetry-tap-hint{font-size:11px;margin-top:20px}
+  .poetry-explanation-layout{grid-template-columns:1fr;gap:14px}
+  .poetry-figure{border-radius:18px}
+  .poetry-figure svg{max-height:320px}
+  .poetry-figure figcaption{font-size:13px;padding:12px 15px 15px}
+  .poetry-explanation-copy{padding:20px 17px;border-radius:18px}
+  .poetry-meaning p{font-size:16px}
+  .poetry-pagination{margin-top:18px}
+  .poetry-pagination .poetry-button{padding:10px 12px;font-size:13px}
+}
+@media(max-width:360px){
+  .poetry-intro{padding:16px 2px 14px}
+  .poetry-intro .poetry-eyebrow,.poetry-intro .poetry-total{display:none}
+  .poetry-intro .poetry-subtitle{margin-bottom:0}
+  .poetry-intro-art{width:72px;flex-basis:72px}
+  .poetry-intro h1{font-size:25px}
+  .poetry-search{gap:6px;padding:0 9px}
+  .poetry-search input{font-size:14px}
+  .poetry-poem-header h1{font-size:23px}
+  .poetry-screen ruby{min-width:1.42em}
+  .poetry-pagination>span{font-size:11px}
+}
+@media(max-width:760px) and (max-height:650px){
+  body[data-mode="home"] .mode-content h2{font-size:16px}
+  body[data-mode="home"] .mode-cta{font-size:10px;margin-top:2px}
+  body[data-mode="home"] .home-welcome h1{font-size:21px;margin:4px 0}
+  body[data-mode="home"] .home-shelf-art>.art{height:41px}
+  body[data-mode="home"] .home-mini{width:40px;height:48px}
+  body[data-mode="home"] .home-shadow-art{max-height:82px}
+  body[data-mode="home"] .home-count-art{flex-direction:row;gap:2px;max-height:85%}
+  body[data-mode="home"] .home-count-pictures{gap:1px}
+  body[data-mode="home"] .home-count-pictures .art{width:19px;height:22px}
+  body[data-mode="home"] .home-count-number{font-size:30px;padding:0 9px}
+}
+@media(max-width:760px) and (max-height:480px){
+  body[data-mode="home"] .mode-options{grid-template-rows:repeat(3,180px)}
+}
+@media(prefers-reduced-motion:reduce){.poetry-screen *, .mode-card.poetry-mode{scroll-behavior:auto!important;transition:none!important}}

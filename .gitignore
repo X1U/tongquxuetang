@@ -1,0 +1,36 @@
+# Local build tools, dependencies, IDE files and caches
+.gradle/
+build/
+.tools/
+node_modules/
+.idea/
+.vscode/
+.codex/
+.agents/
+.voice-cache/
+local.properties
+*.iml
+*.log
+*.tmp
+
+# APK archives and signing credentials stay on this computer
+.releases/
+*.apk
+*.aab
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+
+# Keep verification source and written acceptance notes, not generated runs
+.checks/*
+!.checks/*.cjs
+!.checks/*.java
+!.checks/*.md
+!.checks/*.ps1
+.checks/before-*
