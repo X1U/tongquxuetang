@@ -333,6 +333,7 @@ public final class MainActivity extends Activity implements TextToSpeech.OnInitL
                 + "if (window.AppUpdateUI && window.AppUpdateUI.back()) return 'updates'; "
                 + "if ((mode === 'sound' || mode === 'train') && window.ListeningGames && window.ListeningGames.back()) return 'listening'; "
                 + "if (mode === 'attention' && window.AttentionCards && window.AttentionCards.back()) return 'attention'; "
+                + "if (mode === 'tangram' && window.TangramGame && window.TangramGame.back()) return 'tangram'; "
                 + "if (mode === 'poetry' && window.TangPoetryUI && window.TangPoetryUI.back()) return 'poetry'; "
                 + "if (mode === 'pattern' && window.PatternLearningUI && window.PatternLearningUI.back()) return 'help'; "
                 + "if (mode === 'shadow' && window.ShadowMatchingUI && window.ShadowMatchingUI.back()) return 'help'; "

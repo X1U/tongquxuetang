@@ -1,8 +1,8 @@
 {
   "packageName": "com.picturecard.learning",
-  "versionName": "1.21",
-  "versionCode": 22,
+  "versionName": "1.22",
+  "versionCode": 23,
   "appKey": "ba4269d85206a7df16ff3184c1ec093b",
   "installUrl": "https://www.pgyer.com/tongquxuetang",
-  "notes": "声音侦探新增答对星光、卡片弹跳与答错轻晃反馈，选错后可继续尝试。\n声音侦探和听说小火车的五颗星加大、加深描边，获得新星时会轻轻跳动；横屏也显示星星进度。\n保留原有题目、学习记录、发音人、五档语速及 App 内更新。"
+  "notes": "新增七巧板乐园：三个操作教学、24 关拼图和三档难度，支持拖动、旋转、翻面与吸附。\n提供分步提示、撤销、继续上次拼图和完成星星；自由创作可保存六幅作品并继续编辑。\n七巧板关卡离线可用，朗读沿用首页声音与语速，保留原有九个活动及学习记录。"
 }

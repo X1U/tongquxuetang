@@ -1,0 +1,24 @@
+    <main id="tangramScreen" class="tg-screen" aria-labelledby="tangramTitle" hidden>
+      <div class="tg-heading"><div><p class="tg-kicker">七块小板，拼出大世界</p><h1 id="tangramTitle">七巧板乐园</h1></div><button type="button" id="tgHelp" class="tg-button">怎么玩</button></div>
+      <section id="tgMenu" class="tg-menu" aria-label="七巧板玩法与关卡">
+        <div class="tg-welcome"><div id="tgWelcomeArt" aria-hidden="true"></div><div><h2>小手动一动，形状变一变</h2><p>移一移、转一转，用七块板拼出你的发现。</p></div></div>
+        <div class="tg-menu-actions"><button id="tgTutorial" type="button" class="tg-button">认识七块板</button><button id="tgFree" type="button" class="tg-button tg-primary">自由创作</button><button id="tgWorks" type="button" class="tg-button">我的作品</button></div>
+        <button id="tgResume" type="button" class="tg-resume" hidden></button>
+        <div class="tg-level-heading"><h2>拼图闯关 <span id="tgTotalStars"></span></h2><div class="tg-difficulty" role="group" aria-label="选择拼图难度"><button type="button" data-tg-difficulty="1" aria-pressed="true">跟着拼</button><button type="button" data-tg-difficulty="2" aria-pressed="false">自己拼</button><button type="button" data-tg-difficulty="3" aria-pressed="false">挑战拼</button></div></div>
+        <p id="tgDifficultyNote" class="tg-note"></p><div id="tgLevels" class="tg-levels"></div>
+        <p id="tgStorageMenu" class="tg-storage" role="status"></p>
+      </section>
+      <section id="tgPlay" class="tg-play" aria-label="七巧板拼板" hidden>
+        <div class="tg-play-top"><button type="button" id="tgToMenu" class="tg-button">回关卡</button><h2 id="tgPuzzleTitle"></h2><button type="button" id="tgSpeak" class="tg-button" aria-label="朗读当前七巧板任务">听一听</button></div>
+        <div class="tg-workspace">
+          <div class="tg-board-wrap"><svg id="tgBoard" viewBox="0 0 600 450" role="group" aria-label="七巧板拼板，选中板块后可用方向键移动" tabindex="0"><defs><pattern id="tgDots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="#dadfd2"/></pattern></defs><rect x="0" y="0" width="600" height="450" rx="20" fill="url(#tgDots)"/><g id="tgTarget"></g><g id="tgHintShape"></g><g id="tgPieces"></g></svg><div id="tgReference" class="tg-reference" hidden></div></div>
+          <div class="tg-tools">
+            <div id="tgTray" class="tg-tray" role="group" aria-label="七块小板，拖进拼板或点选"></div><p id="tgSelection" class="tg-selection"></p>
+            <div class="tg-transform"><button type="button" id="tgRotateLeft" class="tg-button">↶ 左转</button><button type="button" id="tgRotateRight" class="tg-button">右转 ↷</button><button type="button" id="tgFlip" class="tg-button" disabled>翻一翻</button></div>
+            <div class="tg-actions"><button type="button" id="tgUndo" class="tg-button" disabled>撤销一步</button><button type="button" id="tgReset" class="tg-button">重新开始</button><button type="button" id="tgReferenceToggle" class="tg-button">看参考</button><button type="button" id="tgHint" class="tg-button">一点提示</button><button type="button" id="tgHelpPlace" class="tg-button tg-primary" hidden>帮我放这块</button><button type="button" id="tgSaveWork" class="tg-button tg-primary" hidden>保存作品</button></div>
+            <p id="tgStatus" class="tg-status" role="status" aria-live="polite"></p><p id="tgStoragePlay" class="tg-storage" role="status"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <dialog id="tgDialog" class="tg-dialog" aria-labelledby="tgDialogTitle"><div class="tg-dialog-heading"><h2 id="tgDialogTitle"></h2><button type="button" id="tgDialogClose" class="tg-button" aria-label="关闭七巧板窗口">关闭</button></div><div id="tgDialogBody"></div><div id="tgDialogActions" class="tg-dialog-actions"></div></dialog>

@@ -81,14 +81,20 @@ assert.equal((html.match(/document\.documentElement\.dataset\.mode=mode;/g)||[])
 assert.ok(html.includes("poetry:'poetryScreen'")&&html.includes("poetry:'poetryTitle'"));
 html=require('./build-listening.cjs').injectListening(html);
 html=require('./build-attention.cjs').injectAttention(html);
+html=require('./build-tangram.cjs').injectTangram(html);
 html=require('./build-updates.cjs').injectUpdates(html);
 html=require('./build-voice-settings.cjs').injectVoiceSettings(html);
+// Keep regenerated marker boundaries free of accumulating whitespace-only lines.
+html=html.replace(/^[ \t]+$/gm,'');
 const scripts=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)];
-assert.equal(scripts.length,20,'Preserve all game, voice and update scripts');
+assert.equal(scripts.length,22,'Preserve all game, voice and update scripts');
 scripts.forEach((script,index)=>new vm.Script(script[1],{filename:'inline-script-'+(index+1)}));
-assert.equal((html.match(/data-open-mode="/g)||[]).length,9);
+assert.equal((html.match(/data-open-mode="/g)||[]).length,10);
 fs.writeFileSync(asset,html,'utf8');
 const standalone=path.resolve(root,'../密码图卡乐园/密码图卡乐园.html');
-assert.ok(fs.existsSync(standalone),'Standalone version must be explicitly present');
-fs.writeFileSync(standalone,html,'utf8');
-console.log(JSON.stringify({...stats,scripts:scripts.length,htmlBytes:Buffer.byteLength(html),synced:true},null,2));
+const syncPreview=process.argv.includes('--sync-preview');
+if(syncPreview){
+  assert.ok(fs.existsSync(standalone),'Standalone version must be explicitly present');
+  fs.writeFileSync(standalone,html,'utf8');
+}
+console.log(JSON.stringify({...stats,scripts:scripts.length,htmlBytes:Buffer.byteLength(html),synced:syncPreview},null,2));
