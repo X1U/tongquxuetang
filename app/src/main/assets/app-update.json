@@ -1,8 +1,8 @@
 {
   "packageName": "com.picturecard.learning",
-  "versionName": "1.22",
-  "versionCode": 23,
+  "versionName": "1.23",
+  "versionCode": 24,
   "appKey": "ba4269d85206a7df16ff3184c1ec093b",
   "installUrl": "https://www.pgyer.com/tongquxuetang",
-  "notes": "新增七巧板乐园：三个操作教学、24 关拼图和三档难度，支持拖动、旋转、翻面与吸附。\n提供分步提示、撤销、继续上次拼图和完成星星；自由创作可保存六幅作品并继续编辑。\n七巧板关卡离线可用，朗读沿用首页声音与语速，保留原有九个活动及学习记录。"
+  "notes": "首页“专注力听觉训练卡”更名为“听觉训练卡”，活动内标题同步更新。\n听觉训练卡与七巧板统一为其他活动的卡片样式，在首页左右相邻排列。\n优化十个活动在手机横竖屏和电脑上的布局，保留全部玩法、声音设置与学习记录。"
 }

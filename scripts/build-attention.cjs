@@ -38,7 +38,8 @@ function injectAttention(html){
   html=html.replace('    <footer class="footer">',block('view',read('view.html'))+'    <footer class="footer">');
   const scripts='<script id="attention-data">\nwindow.AttentionLessons='+JSON.stringify(lessons()).replace(/</g,'\\u003c')+';\n</script>\n<script id="attention-app">\n'+read('app.js')+'\n</script>';
   html=html.replace('  <script id="mode-router">',block('scripts',scripts)+'  <script id="mode-router">');
-  if(!html.includes("attention:'专注力听觉训练卡 · 童趣学堂'"))html=html.replace(/(const titles=\{[^\n]+)(\};)/,"$1,attention:'专注力听觉训练卡 · 童趣学堂'$2");
+  html=html.replace(/attention:'[^']*'/,"attention:'听觉训练卡 · 童趣学堂'");
+  if(!html.includes("attention:'听觉训练卡 · 童趣学堂'"))html=html.replace(/(const titles=\{[^\n]+)(\};)/,"$1,attention:'听觉训练卡 · 童趣学堂'$2");
   if(!html.includes("attention:'attentionScreen'"))html=html.replace(/(const screens=\{[^\n]+)(\};)/,"$1,attention:'attentionScreen'$2");
   if(!html.includes("attention:'attentionTitle'"))html=html.replace("train:'trainTitle'}[mode]","train:'trainTitle',attention:'attentionTitle'}[mode]");
   assert.ok(html.includes("attention:'attentionScreen'")&&html.includes("attention:'attentionTitle'"));

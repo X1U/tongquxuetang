@@ -1,4 +1,4 @@
-/* The ninth activity uses the same paper, sage and warm yellow palette. */
+/* Listening cards use the same paper, sage and warm yellow palette. */
 .attention-screen{--attention-ink:#365a4b;--attention-line:#dce5d9;display:flex;flex-direction:column;gap:8px;width:min(880px,100%);margin:0 auto;flex:1;min-height:0;color:var(--attention-ink)}
 .attention-screen[hidden],.attention-screen [hidden],.attention-dialog [hidden]{display:none!important}
 html[data-mode="attention"],body[data-mode="attention"]{height:100%;min-height:0;overflow:hidden}
@@ -48,8 +48,6 @@ body[data-mode="attention"] .brand-sub,body[data-mode="attention"] .footer{displ
 .attention-dialog[open]{display:flex;flex-direction:column;gap:12px}.attention-dialog:not([open]){display:none}.attention-dialog::backdrop{background:#23382f69;backdrop-filter:blur(3px)}
 .attention-dialog-heading h2{font-size:21px;margin:0}.attention-dialog-body{overflow:auto;min-height:0;overscroll-behavior:contain;font-size:15px;line-height:1.8}.attention-dialog-body>p{margin:0 0 10px}.attention-dialog>.attention-primary{flex-shrink:0}
 .attention-mode .mode-cover{background:#edf0df}.attention-mode .mode-cta{color:#5d7f65}#homeAttentionArt svg{display:block;width:90%;height:95%;max-width:240px;position:relative;z-index:1}
-body[data-mode="home"] .mode-options{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
-body[data-mode="home"] .attention-mode h2{font-size:19px}
 @media(max-width:760px){
   body[data-mode="attention"] .app{padding:5px 10px max(7px,env(safe-area-inset-bottom));gap:5px}
   body[data-mode="attention"] .header{height:35px;min-height:35px;flex-basis:35px}.attention-screen{gap:6px}
@@ -61,13 +59,6 @@ body[data-mode="home"] .attention-mode h2{font-size:19px}
   .attention-question-heading{gap:6px;margin:10px 0}.attention-question-heading h2{font-size:21px}.attention-options{gap:8px}.attention-option{min-height:54px;padding:8px 10px;gap:9px}.attention-option-text{font-size:18px}.attention-option-mark{font-size:10px}
   .attention-audio-row{gap:6px}.attention-audio-row .attention-primary{min-height:40px;min-width:120px;font-size:14px;padding:6px 10px}.attention-text-button{font-size:11px}.attention-status{font-size:13px;min-height:34px;padding:6px 9px}
   .attention-bottom button{min-height:44px;font-size:15px}.attention-progress{font-size:10px}.attention-sentence{font-size:19px;padding:10px 12px}#attentionResultTitle{font-size:22px}
-  /* Keep all nine activities on the first screen, while giving the listening card
-     enough height to read as a real entry instead of a thin footer strip. */
-  body[data-mode="home"] .mode-options{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr)) 92px}
-  body[data-mode="home"] .attention-mode{grid-column:1 / -1;flex-direction:row;align-items:stretch}
-  body[data-mode="home"] .attention-mode .mode-cover{flex:0 0 104px;width:104px;height:100%}
-  body[data-mode="home"] .attention-mode .mode-content{flex:1;text-align:left;align-self:center;padding:8px 14px}
-  body[data-mode="home"] .attention-mode h2{font-size:19px}body[data-mode="home"] .attention-mode .mode-description{display:block;margin:4px 0 0;font-size:12px;line-height:1.45}
 }
 @media(max-height:650px){
   .attention-illustration{flex-basis:75px;max-height:75px}.attention-listen-panel{gap:6px}.attention-memory{display:none}.attention-listen-panel h2{font-size:19px}.attention-listen-panel p{font-size:12px}
@@ -75,11 +66,6 @@ body[data-mode="home"] .attention-mode h2{font-size:19px}
   .attention-option{min-height:44px;padding:5px 8px;border-radius:11px;gap:7px}.attention-option-number{flex-basis:24px;height:24px;font-size:12px}.attention-option-text{font-size:16px}.attention-options{gap:6px}
   .attention-audio-row .attention-primary{min-height:36px;font-size:13px}.attention-audio-row .attention-small{min-height:32px;font-size:12px;padding:4px 7px}
   .attention-card{gap:6px;padding:8px}.attention-status{font-size:12px}.attention-screen{gap:5px}.attention-text-button{font-size:10px;min-height:26px}
-  body[data-mode="home"] .mode-options{gap:5px;grid-template-rows:repeat(4,minmax(0,1fr)) 82px}body[data-mode="home"] .mode-content h2{font-size:15px}
-  body[data-mode="home"] .attention-mode .mode-cover{flex-basis:92px;width:92px}
-  body[data-mode="home"] .attention-mode .mode-content{padding:6px 11px}
-  body[data-mode="home"] .attention-mode h2{font-size:17px}
-  body[data-mode="home"] .attention-mode .mode-description{font-size:11px}
 }
 @media(orientation:landscape) and (max-height:550px){
   .attention-screen{display:grid;grid-template-columns:minmax(210px,43%) minmax(0,1fr);grid-template-rows:34px 32px 25px minmax(0,1fr) 40px;gap:5px 9px}
@@ -92,7 +78,4 @@ body[data-mode="home"] .attention-mode h2{font-size:19px}
   .attention-question-heading h2{font-size:17px}.attention-question-heading .attention-small{min-height:29px;padding:4px 7px;font-size:11px}.attention-option-text{font-size:15px}.attention-option-mark{font-size:9px}
   #attentionQuestionPanel>.attention-badge{display:none}
   .attention-audio-row{gap:4px}.attention-audio-row .attention-primary{min-width:95px;font-size:12px;padding:4px 7px;min-height:32px}.attention-text-button{font-size:10px}.attention-illustration{max-height:78px}
-  body[data-mode="home"] .mode-options{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr))}
-  body[data-mode="home"] .attention-mode{grid-column:auto;flex-direction:column}body[data-mode="home"] .attention-mode .mode-cover{width:100%;height:auto;flex:1;min-height:0}
-  body[data-mode="home"] .attention-mode .mode-content{flex:0 0 auto;text-align:center;align-self:auto;padding:2px 4px 4px}body[data-mode="home"] .attention-mode h2{font-size:13px}body[data-mode="home"] .attention-mode .mode-description{display:none}
 }
